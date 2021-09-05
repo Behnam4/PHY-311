@@ -206,9 +206,74 @@
     \begin{enumerate}
       \item $\overrightarrow{\nabla} \left(\dfrac{1}{\scriptr}\right)=-\dfrac{\hat{\scriptr}}{\scriptr^2}$
 
+        \textcolor{hwColor}{
+          $
+            \overrightarrow{\nabla} \left(\dfrac{1}{\scriptr}\right)
+            =\overrightarrow{\nabla} \left(\dfrac{1}{r-r^'}\right)
+            =\overrightarrow{\nabla} \left(\dfrac{1}{\sqrt{(x-x^')^2+(y-y^')^2+(z-z^')^2}}\right)
+            \\
+            \\
+            =\left(\dfrac{\partial}{\partial x} \hat{x}+\dfrac{\partial}{\partial y} \hat{y}+\dfrac{\partial}{\partial z} \hat{z}\right)
+            .\left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{1}{2}}
+            \\
+            \\
+            \\
+            =\dfrac{\partial}{\partial x} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{1}{2}} \hat{x}
+            \\
+            +\dfrac{\partial}{\partial y} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{1}{2}} \hat{y}
+            \\
+            +\dfrac{\partial}{\partial z} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{1}{2}} \hat{z}
+            \\
+            \\
+            \\
+            =(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} \dfrac{d}{dx} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right) \hat{x}
+            \\
+            +(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} \dfrac{d}{dy} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right) \hat{y}
+            \\
+            +(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} \dfrac{d}{dz} \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right) \hat{z}
+            \\
+            \\
+            \\
+            =(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} 2(x-x^') \hat{x}
+            \\
+            +(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} 2(y-y^') \hat{y}
+            \\
+            +(-\dfrac{1}{2}) \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{-\dfrac{3}{2}} 2(z-z^') \hat{z}
+            \\
+            \\
+            \\
+            =-\dfrac{x-x^'}{\left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{\dfrac{3}{2}}} \hat{x}
+            \\
+            -\dfrac{y-y^'}{\left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{\dfrac{3}{2}}} \hat{y}
+            \\
+            -\dfrac{z-z^'}{\left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)^{\dfrac{3}{2}}} \hat{z}
+            \\
+            \\
+            \\
+            =-\dfrac{\left[(x-x^')^2 \hat{x}+(y-y^')^2 \hat{y}+(z-z^')^2 \hat{z}\right]}{\sqrt{(x-x^')^2+(y-y^')^2+(z-z^')^2} . \left((x-x^')^2+(y-y^')^2+(z-z^')^2\right)}
+            \\
+            \\
+            \\
+            =-\dfrac{\dfrac{(x-x^')^2 \hat{x}+(y-y^')^2 \hat{y}+(z-z^')^2 \hat{z}}{\sqrt{(x-x^')^2+(y-y^')^2+(z-z^')^2}}}{(x-x^')^2+(y-y^')^2+(z-z^')^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{\nabla} \left(\dfrac{1}{\scriptr}\right)=-\dfrac{\hat{\scriptr}}{\scriptr^2}
+          $ 
+        }
+
       \item $\overrightarrow{\nabla} . \left(\dfrac{\hat{\scriptr}}{\scriptr^2}\right)=4 \pi \delta^3 (\overrightarrow{\scriptr})$
 
+        % \textcolor{hwColor}{
+            
+        % }
+
       \item $\overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}= \overrightarrow{0}$
+
+        % \textcolor{hwColor}{
+            
+        % }
+
     \end{enumerate} 
 
 
