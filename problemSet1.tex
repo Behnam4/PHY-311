@@ -372,11 +372,45 @@
           $$ 
         }
 
-      \item $\overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}= \overrightarrow{0}$
+      \item $\overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}=\overrightarrow{0}$
 
-        % \textcolor{hwColor}{
-            
-        % }
+        \textcolor{hwColor}{
+          $
+            \overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}
+            =\overrightarrow{\nabla} \times \left(\scriptr^n \dfrac{\overrightarrow{\scriptr}}{\scriptr}\right)
+            =\overrightarrow{\nabla} \times \left(\scriptr^{n-1} \overrightarrow{\scriptr}\right)
+            \\
+            \\
+            =\overrightarrow{\nabla} \times \left[\scriptr^{n-1} \left((x-x^') \hat{x}+(y-y^') \hat{y}+(z-z^') \hat{z}\right)\right]
+            \\
+            \\
+            =\begin{vmatrix}
+              \hat{x} & \hat{y} & \hat{z} 
+              \\
+              \\
+              \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}
+              \\
+              \\
+              \scriptr^{n-1}(x-x^') & \scriptr^{n-1}(y-y^') & \scriptr^{n-1}(z-z^')
+            \end{vmatrix}
+            \\
+            \\
+            \\
+            =\left[\dfrac{\partial}{\partial y} \scriptr^{n-1}(z-z^')-\dfrac{\partial}{\partial z} \scriptr^{n-1}(y-y^')\right] \hat{x}
+            \\
+            +\left[\dfrac{\partial}{\partial x} \scriptr^{n-1}(z-z^')-\dfrac{\partial}{\partial z} \scriptr^{n-1}(x-x^')\right] \hat{y}
+            \\
+            +\left[\dfrac{\partial}{\partial x} \scriptr^{n-1}(y-y^')-\dfrac{\partial}{\partial y} \scriptr^{n-1}(x-x^')\right] \hat{z}
+            \\
+            \\
+            \\
+            =0 \hat{x}+0 \hat{y}+0 \hat{z}
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}=\overrightarrow{0}
+          $
+        }
 
     \end{enumerate} 
 
