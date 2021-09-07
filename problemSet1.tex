@@ -410,6 +410,7 @@
             \\
             \therefore ~~~ \overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}=\overrightarrow{0}
           $
+          \\
         }
 
     \end{enumerate} 
@@ -420,13 +421,87 @@
       \item $\bigints\limits_{V} \left( \overrightarrow{\nabla} T \right) d\tau=\bigoint\limits_{S} T d\overrightarrow{a}$ where $T$ is a
       scalar function and $S$ is a surface bounding the volume $V$.
       
-      
-
+        \textcolor{hwColor}{
+          In the divergence theorem $(1.56)$ let $T=\phi c$ where $c$ is a constant vector. We then have 
+          $$
+            \bigints\limits_{V} \overrightarrow{\nabla}. \left(\phi c\right) d\tau=\bigoint\limits_{S} \phi c.da
+          $$
+          From page 21 of the textbook we learned that $\overrightarrow{\nabla}.(fA)=f(\overrightarrow{\nabla}.A)+A.(\overrightarrow{\nabla} f)$.
+          Expanding out the integrand on the LHS we have 
+          \\
+          \\
+          $
+            \overrightarrow{\nabla}.(\phi c)= \phi \overrightarrow{\nabla}.c+c.\overrightarrow{\nabla} \phi=c.\overrightarrow{\nabla} \phi
+          $
+          \\
+          \\
+          since $c$ is constant. Also, $\phi c.da=c.\phi da$, so we obtain
+          \\
+          \\
+          $
+            \bigints\limits_{V} c.\left(\overrightarrow{\nabla} \phi\right) d\tau=\bigoint\limits_{S} c.\phi da
+          $
+          \\
+          \\
+          Since $c$ is constant we may take it out of both integrals to give
+          \\
+          $
+            c.\bigints\limits_{V} \overrightarrow{\nabla} \phi d\tau=c.\bigoint\limits_{S} \phi da 
+          $
+          \\
+          \\
+          And since $c$ is arbitrary we obtain the given equation.
+          \\
+        }
 
       \item $\bigints\limits_{S} \overrightarrow{\nabla} T \times d\overrightarrow{a}=-\bigoint\limits_{C} T d\overrightarrow{l}$ where $T$ is a scalar function 
       and $C$ is a curve bounding the surface $S$.
 
-
+        \textcolor{hwColor}{
+          In Stoke's theorem, $(1.57)$, let $T=\phi c$, where $c$ is a constant vector. We then have
+          $$
+            \bigints\limits_{S} \left[\overrightarrow{\nabla} \times (\phi c)\right]. da
+            =\bigoint\limits_{C} \phi c.dl ~~~~~ (A)
+          $$
+          Expanding out the integrand on the LHS we have
+          \\
+          \\
+          $
+            \overrightarrow{\nabla} \times \left(\phi c\right)
+            =\overrightarrow{\nabla} \phi \times c+\phi \overrightarrow{\nabla} \times c
+            =\overrightarrow{\nabla} \phi \times c
+          $
+          \\
+          \\
+          Since $c$ is constant, and the scalar triple product on the LHS $\left(\bigints\limits_{S} \left[\overrightarrow{\nabla} \times (\phi c)\right]. da\right)$
+          can therefore be written
+          \\
+          \\
+          $
+            \left[\overrightarrow{\nabla} \times \left(\phi c\right)\right].da=
+            \left(\overrightarrow{\nabla} \phi \times c\right).da=c.\left(da \times \overrightarrow{\nabla} \phi\right)
+          $
+          \\
+          \\
+          Substituting this into $(A)$ and taking $c$ out of both integrals because it is constant, we find
+          \\
+          \\
+          $
+            c.\bigints\limits_{S} da \times \overrightarrow{\nabla} \phi=c.\bigoint\limits_{C} \phi dl
+          $
+          \\
+          \\
+          Recall that for two vectors $A$ and $B$ we have $\overrightarrow{A} \times \overrightarrow{B}=-\overrightarrow{B} \times \overrightarrow{A}$
+          \\
+          \\
+          $
+            \therefore ~~~ c.\bigints\limits_{S} \overrightarrow{\nabla} \phi \times da=-c.\bigoint\limits_{C} \phi dl
+          $
+          \\
+          \\
+          Since $c$ is an arbitrary constant vector we therefore obtain the given equation.
+          \\
+        }
 
     \end{enumerate}
 
