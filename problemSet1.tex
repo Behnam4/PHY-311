@@ -259,14 +259,118 @@
             \\
             \\
             \therefore ~~~ \overrightarrow{\nabla} \left(\dfrac{1}{\scriptr}\right)=-\dfrac{\hat{\scriptr}}{\scriptr^2}
+            \\
+            \\
           $ 
         }
 
       \item $\overrightarrow{\nabla} . \left(\dfrac{\hat{\scriptr}}{\scriptr^2}\right)=4 \pi \delta^3 (\overrightarrow{\scriptr})$
 
-        % \textcolor{hwColor}{
-            
-        % }
+        \textcolor{hwColor}{
+          $
+            \overrightarrow{\nabla} . \left(\dfrac{\hat{\scriptr}}{\scriptr^2}\right)
+            =\overrightarrow{\nabla} . \left(\dfrac{\dfrac{\overrightarrow{\scriptr}}{\scriptr}}{\scriptr^2}\right)
+            =\overrightarrow{\nabla} . \left(\dfrac{\overrightarrow{\scriptr}}{\scriptr^3}\right)
+            \\
+            \\
+            \\
+            =\overrightarrow{\nabla} . \left(\dfrac{\overrightarrow{\scriptr}}{\scriptr^3}\right)
+            =\left(\dfrac{\partial}{\partial x} \hat{x}+\dfrac{\partial}{\partial y} \hat{y}+\dfrac{\partial}{\partial z} \hat{z}\right)
+            . \left(\dfrac{(x-x^') \hat{x}+(y-y^') \hat{y}+(z-z^') \hat{z}}{\left[(x-x^')^2+(y-y^')^2+(z-z^')^2\right]^{3/2}}\right)
+            \\
+            \\
+            \\
+            =\dfrac{\partial}{\partial x} \dfrac{(x-x^')}{\left[(x-x^')^2+(y-y^')^2+(z-z^')^2\right]^{3/2}}
+            \\
+            +\dfrac{\partial}{\partial y} \dfrac{(y-y^')}{\left[(x-x^')^2+(y-y^')^2+(z-z^')^2\right]^{3/2}}
+            \\
+            +\dfrac{\partial}{\partial z} \dfrac{z-z^'}{\left[(x-x^')^2+(y-y^')^2+(z-z^')^2\right]^{3/2}}
+          $
+          \\
+          \\
+          \\
+          Let's define $k=(x-x^')^2+(y-y^')^2+(z-z^')^2$ so we have;
+          \\
+          \\
+          $
+            =\dfrac{\partial}{\partial x} \dfrac{(x-x^')}{k^{3/2}}
+            +\dfrac{\partial}{\partial y} \dfrac{(y-y^')}{k^{3/2}}
+            +\dfrac{\partial}{\partial z} \dfrac{(z-z^')}{k^{3/2}}
+            \\
+            \\
+            \\
+            =\dfrac{k^{3/2}-\left[\dfrac{3}{2} k^{1/2} \times 2(x-x^')\right] (x-x^')}{k^3}
+            +\dfrac{k^{3/2}-\left[\dfrac{3}{2} k^{1/2} \times 2(y-y^')\right] (y-y^')}{k^3}
+            +\dfrac{k^{3/2}-\left[\dfrac{3}{2} k^{1/2} \times 2(z-z^')\right] (z-z^')}{k^3}
+            \\
+            \\
+            \\
+            =\dfrac{
+              \left[k^{3/2} -3(x-x^')^2 k^{1/2}\right]
+              +\left[k^{3/2} -3(y-y^')^2 k^{1/2}\right]
+              +\left[k^{3/2} -3(y-y^')^2 k^{1/2}\right]
+            }{k^3}
+            \\
+            \\
+            \\
+            =\dfrac{3k^{3/2}-3k^{1/2} \left((x-x^')^2+(y-y^2)^2+(z-z^')^2\right)}{k^3}
+            =\dfrac{3k^{3/2}-\left(3k^{1/2} \times k\right)}{k^3}=0
+            \\
+            \\
+            \\
+            \therefore ~~~ \overrightarrow{\nabla} . \left(\dfrac{\hat{\scriptr}}{\scriptr^2}\right)=0
+          $
+          \\
+          \\
+          Isn't the result odd?
+          \\
+          \\
+          The given question has $\scriptr$ in the denominator so we do not know the divergence at the origin. Now let's apply the fundamental
+          theorem for divergence for a sphere of radius $R$;
+          \\
+          \\ 
+          $
+            \bigints\limits_{Volume} \left( \overrightarrow{\nabla} . \overrightarrow{V} \right) d\tau
+            =\bigoint\limits_{Surface} \overrightarrow{V} . d\overrightarrow{a}
+            =\bigoint\limits_{Surface} \dfrac{1}{R^2} \hat{\scriptr} . \left(R^2 sin(\theta) d\theta d\phi  \hat{\scriptr} \right)
+            \\
+            \\
+            \\
+            =\bigoint\limits_{Surface} sin(\theta) d\theta d\phi
+            =\bigints\limits_{\theta=0}^{\theta=\pi} sin(\theta) d\theta \bigints\limits_{\phi=0}^{\phi=2\pi} d\phi
+            =-cos(\theta) \Big|_{\theta=0}^{\theta=\pi} \times \phi \Big|_{\phi=0}^{\phi=2 \pi}
+            =(-1-1) \times 2 \pi=4 \pi
+            \\
+            \\
+            \\
+            \therefore ~~~  \bigints\limits_{Volume} \left( \overrightarrow{\nabla} . \overrightarrow{V} \right) d\tau
+            =\bigoint\limits_{Surface} \overrightarrow{V} . d\overrightarrow{a}=4 \pi
+          $
+          \\
+          \\
+          We found the flux through the sphere of radius $R$. This is suprising! The divergence we calculated was zero but the flux is $4 \pi$.
+          Problems liek this one spur the invention of the \textbf{Dirac Delta} function. From page $50$ of the textbook we have;
+          \\
+          \\
+          $$
+            \delta^3(r)=\delta(x)\delta(y)\delta(z)
+          $$
+          The three-dimensional delta function is zero everywhere excpet at $(0, 0, 0)$, where it blows up. Its volume integral is $1$:
+          \\
+          \\
+          $
+            \bigints\limits_{all ~ space} \delta^3(r)
+            =\bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \bigints\limits_{-\infty}^{+\infty} \delta(x)\delta(y)\delta(z) dx dy dz=1
+          $
+          \\
+          \\
+          Now we are in a position to resolve the paradox introduced here. We found that the divergence is zero everywhere excpet at the origin, and yet its
+          integral over any volume containing the origin is a constant ($4 \pi$). These are precisely the defining conditions for the \textbf{Dirac Delta}
+          function; evidently
+          $$
+            \overrightarrow{\nabla} . \left(\dfrac{\hat{\scriptr}}{\scriptr^2}\right)=4 \pi \delta^3(\scriptr)
+          $$ 
+        }
 
       \item $\overrightarrow{\nabla} \times \scriptr^n \hat{\scriptr}= \overrightarrow{0}$
 
