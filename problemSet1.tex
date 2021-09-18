@@ -505,10 +505,96 @@
 
     \end{enumerate}
 
+    \pagebreak
+
     \item A solid sphere of radius $R$ has uniform charge density $\rho$. Find the
     electric field $\overrightarrow{E}$ for all values of the radius $r$, both less than and greater
     than $R$.
 
+      \textcolor{hwColor}{
+        Let's start off with our Gaussian surface. The magnitude of $\overrightarrow{E}$ is constant over the Gaussian surface and since
+        $\overrightarrow{E}$ points out radially outward we have the following. ($r$ is the radius of Gaussian surface)
+        \\
+        \\
+        $
+          \bigoint \overrightarrow{E}.d\overrightarrow{a}
+          =\bigoint |\overrightarrow{E}|.d\overrightarrow{a}
+          =|\overrightarrow{E}| \bigoint d\overrightarrow{a}
+          =|\overrightarrow{E}| \times 4 \pi r^2
+          \\
+          \\
+          \\
+          \therefore ~~~~ \overrightarrow{E}=\dfrac{1}{4 \pi \epsilon_0} Q_{enc} \hat{r}
+        $
+        \\
+        \\
+        \\
+        \\
+        \textbf{Inside:}
+        \\
+        \\
+        $
+          q=\rho v=\rho \dfrac{4}{3} \pi r^3 \longrightarrow Q_{enc}=\rho \dfrac{4}{3} \pi r^3
+          \\
+          \\
+          \bigoint \overrightarrow{E}.d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enc}
+          \\
+          \\
+          \\
+          |\overrightarrow{E}| 4 \pi r^2=\dfrac{1}{\epsilon_0} Q_{enc}
+          \\
+          \\
+          \\
+          |\overrightarrow{E}|=\dfrac{\dfrac{1}{\epsilon_0} Q_{enc}}{4 \pi r^2}
+          =\dfrac{\dfrac{1}{\epsilon_0} \times \rho \dfrac{4}{3} \pi r^3}{4 \pi r^2}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{E}=\dfrac{1}{3 \epsilon_0} \rho r \hat{r}
+        $
+        \\
+        \\
+        \\
+        \\
+        \textbf{Outside:}
+        \\
+        \\
+        $
+          q=\rho v=\rho \dfrac{4}{3} \pi R^3 \longrightarrow Q_{enc}=\rho \dfrac{4}{3} \pi R^3
+          \\
+          \\
+          \bigoint \overrightarrow{E}.d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enc}
+          \\
+          \\
+          \\
+          |\overrightarrow{E}| 4 \pi r^2=\dfrac{1}{\epsilon_0} Q_{enc}
+          \\
+          \\
+          \\
+          |\overrightarrow{E}|=\dfrac{\dfrac{1}{\epsilon_0} Q_{enc}}{4 \pi r^2}
+          =\dfrac{\dfrac{1}{\epsilon_0} \times \rho \dfrac{4}{3} \pi R^3}{4 \pi r^2}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{E}=\dfrac{1}{3 \epsilon_0} \dfrac{R^3}{r^2} \rho \hat{r}
+        $
+        \\
+        \\
+        Hence, we have the final following result:
+        \\
+        \\
+        $
+          \overrightarrow{E}(\overrightarrow{r})=
+          \begin{cases}
+            \dfrac{1}{3 \epsilon_0} \rho r \hat{r} ~~~~ r < R
+            \\
+            \\
+            \dfrac{1}{3 \epsilon_0} \dfrac{R^3}{r^2} \rho \hat{r} ~~~~ r \geq R
+          \end{cases}
+        $
+        \\
+        \\
+      }
 
 
     \item Consider a hollow ice cream cone placed upside-down with the tip or
@@ -516,18 +602,26 @@
     and that its height is $L$ (so the vertex is at $z=L$). If the cone has uniform surface charge density $\sigma$, what is the
     force on a charge $q$ placed at its tip?
 
-
+      % \textcolor{hwColor}{
+        
+      % }
 
     \item Suppose the semi-positive x-axis, $x\geq 0$, has linear charge density $\lambda$.
     Find the electric field at a point with $x=0$ but at a distance $L$ from the origin.
 
+      % \textcolor{hwColor}{
+        
+      % }
 
-    \item  Let the electric field, expressed in spherical coordinates, be
+    \item Let the electric field, expressed in spherical coordinates, be
     $$\overrightarrow{E}(\overrightarrow{r})=\dfrac{b}{r}\hat{r}
     +\dfrac{2b}{3r} sin(\theta) cos(\theta) sin(\phi) \hat{\theta}
     +\dfrac{b}{3r} sin(\theta) cos(\phi) \hat{\phi}$$
     where $b$ is some constant. Find the charge density $\rho(r, \theta, \phi)$.
 
+      % \textcolor{hwColor}{
+        
+      % }
 
     \item Look up the mass and charge of a proton and the values of the appropriate constants for this problem.
     \begin{enumerate}
@@ -536,11 +630,17 @@
       their gravitational attraction. That is why gravity is known as a
       weak force.
 
+        % \textcolor{hwColor}{
+        
+        % }
 
       \item Two protons in a helium nucleus are roughly $10^{-15}m$ apart. Calculate the force of 
       electric repulsion in Newtons. To put that in perspective, calculate the acceleration (in $m/s^2$) that a proton
       would feel. That is why the nuclear force that overcomes this repulsion is known as the strong force.
 
+        % \textcolor{hwColor}{
+        
+        % }
 
     \end{enumerate}
 
