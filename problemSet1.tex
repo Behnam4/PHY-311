@@ -693,9 +693,50 @@
     +\dfrac{b}{3r} sin(\theta) cos(\phi) \hat{\phi}$$
     where $b$ is some constant. Find the charge density $\rho(r, \theta, \phi)$.
 
-      % \textcolor{hwColor}{
-        
-      % }
+      \textcolor{hwColor}{
+        One page 70 of the textbook we have $\overrightarrow{\nabla}.\overrightarrow{E}=\dfrac{1}{\epsilon_0} \rho$. Therefore,
+        \\
+        \\
+        $
+          \overrightarrow{\nabla}.a
+          =\dfrac{1}{r^2} \dfrac{\partial}{\partial r} (r^2 a_r)
+          +\dfrac{1}{r sin(\theta)} \dfrac{\partial}{\partial \theta} \left(sin(\theta) a_{\theta}\right)
+          +\dfrac{1}{r sin(\theta)} \dfrac{\partial a_{\phi}}{\partial \phi}
+          \\
+          \\
+          \\
+          \rho=\epsilon_0 \left(\overrightarrow{\nabla}.\overrightarrow{E}\right)
+          \\
+          \\
+          =\epsilon_0 \dfrac{1}{r^2} \dfrac{\partial}{\partial r} (r^2 \dfrac{b}{r})
+          +\dfrac{1}{r sin(\theta)} \dfrac{\partial}{\partial \theta} \left(sin(\theta) \dfrac{2b}{3r} sin(\theta) cos(\theta) sin(\phi) \right)
+          +\dfrac{1}{r sin(\theta)} \dfrac{\partial \dfrac{b}{3r} sin(\theta) cos(\phi)}{\partial \phi}
+          \\
+          \\
+          \\
+          =\epsilon_0 \left[
+            \dfrac{b}{r^2} \partial_r(r)+\partial_{\theta}\left(sin^2(\theta) cos(\theta)\right) \left(\dfrac{2b sin(\theta)}{3 r^2 sin(\theta)}\right)+\dfrac{b}{3r^2} \partial_{\phi}\left(cos(\phi)\right)
+          \right]
+          \\
+          \\
+          \\
+          =\epsilon_0 \left[
+            \dfrac{b}{r^2}-\dfrac{2b sin(\phi)}{3 r^2 sin(\theta)} \left(2 sin(\theta) cos^2(\theta)-sin^3(\theta)\right)-\dfrac{b sin(\phi)}{3r^2}
+          \right]
+          \\
+          \\
+          \\
+          =\epsilon_0 \left[
+            \dfrac{b}{r^2} \left[1-\dfrac{sin(\phi)}{3}+\dfrac{4 cos^2(\theta) sin(\phi)}{3}-\dfrac{2 sin(\phi) sin^2(\theta)}{3}\right]
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \rho(r, \theta, \phi)=\epsilon_0 \dfrac{b}{r^2} \left[
+            1+\dfrac{2sin(\phi)}{3} \left(2 cos^2(\theta)-sin^2(\theta)-\dfrac{1}{2}\right)
+          \right] ~~~ \checkmark
+        $
+      }
 
     \item Look up the mass and charge of a proton and the values of the appropriate constants for this problem.
     \begin{enumerate}
