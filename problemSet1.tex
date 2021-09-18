@@ -609,9 +609,83 @@
     \item Suppose the semi-positive x-axis, $x\geq 0$, has linear charge density $\lambda$.
     Find the electric field at a point with $x=0$ but at a distance $L$ from the origin.
 
-      % \textcolor{hwColor}{
-        
-      % }
+      \textcolor{hwColor}{
+        This problem is similar to the one on page 64 of the textbook.
+        \\
+        \includegraphics[height=6cm, width=6cm]{B.JPG}
+        \\
+        $
+          \begin{cases}
+            \overrightarrow{r}=L \hat{z}
+            \\
+            \\
+            \overrightarrow{r}^'=x \hat{x}
+            \\
+            \\
+            \overrightarrow{\scriptr}=r-r^'=L \hat{z}-x \hat{x}
+            \\
+            \\
+            |\overrightarrow{\scriptr}|=\sqrt{L^2+x^2}
+            \\
+            \\
+            \hat{\scriptr}=\dfrac{\overrightarrow{\scriptr}}{\scriptr}=\dfrac{L \hat{z}}{\sqrt{L^2+x^2}}
+          \end{cases}
+          \\
+          \\
+          \\
+          F=QE \longrightarrow E=\dfrac{E}{Q}=\dfrac{1}{Q} \dfrac{1}{4 \pi \epsilon_0} \dfrac{Q q_{source}}{\scriptr^2}
+          \\
+          \\
+          \therefore ~~~ |\overrightarrow{E}|=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q_{source}}{\scriptr^2}
+          \\
+          \\
+        $
+        So with this fact, let's continue the work
+        $
+          \\
+          \\
+          \\
+          \overrightarrow{E}=\dfrac{1}{4 \pi \epsilon_0} \bigints\limits_{0}^{x} \dfrac{\lambda}{\scriptr^2} \hat{\scriptr} dx
+          =\dfrac{1}{4 \pi \epsilon_0} \bigints\limits_{0}^{x} \dfrac{\lambda}{x^2+L^2} \dfrac{L \hat{z}}{\sqrt{L^2+x^2}} dx
+          \\
+          \\
+          \\
+          =\dfrac{\lambda}{4 \pi \epsilon_0} \left[
+            \bigints\limits_{0}^{x} \dfrac{L \hat{z}}{\left(L^2+x^2\right)^{3/2}}
+            -\bigints\limits_{0}^{x} \dfrac{x \hat{x}}{\left(L^2+x^2\right)^{3/2}}
+          \right]
+          \\
+          \\
+          \\
+          \begin{cases}
+            (A): x=L tan(\theta), ~~~ \theta=arctan(\dfrac{x}{L})
+            \\
+            \\
+            (B): k=L^2+x^2
+          \end{cases}
+          \\
+          \\
+          \\
+          =\dfrac{\lambda}{4 \pi \epsilon_0} \left[
+            L^2 \bigints\limits_{0}^{arctan(\dfrac{x}{L})} \dfrac{sec^2(\theta)}{L^3 sec^3(\theta)} \hat{z} d\theta
+            -\bigints\limits_{L^2}^{L^2+x^2} \dfrac{\hat{x}}{2 k^{\dfrac{3}{2}}} dk
+          \right]
+          \\
+          \\
+          \\
+          =\dfrac{\lambda}{4 \pi \epsilon_0} \left[
+            \dfrac{L-\sqrt{L^2+x^2}}{L \sqrt{L^2+x^2}} \hat{x}
+            +\dfrac{x}{L \sqrt{L^2+x^2}} \hat{z}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{E}=\dfrac{\lambda}{4 \pi \epsilon_0} \left[
+            \dfrac{L-\sqrt{L^2+x^2}}{L \sqrt{L^2+x^2}} \hat{x}
+            +\dfrac{x}{L \sqrt{L^2+x^2}} \hat{z}
+          \right] ~~~ \checkmark
+        $
+      }
 
     \item Let the electric field, expressed in spherical coordinates, be
     $$\overrightarrow{E}(\overrightarrow{r})=\dfrac{b}{r}\hat{r}
