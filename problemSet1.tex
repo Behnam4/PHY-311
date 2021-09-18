@@ -602,9 +602,67 @@
     and that its height is $L$ (so the vertex is at $z=L$). If the cone has uniform surface charge density $\sigma$, what is the
     force on a charge $q$ placed at its tip?
 
-      % \textcolor{hwColor}{
-        
-      % }
+      \textcolor{hwColor}{
+        The general prescription for force between two charges is $F=k\dfrac{q Q}{r^2}$.
+        \\
+        \\
+        \includegraphics[height=8cm, width=8cm]{C.JPG}
+        \\
+        Let's use $\overrightarrow{F}=Q \overrightarrow{E}$
+        \\
+        \\
+        For the triangle created by the cone we have:
+        \\
+        \\
+        $
+          \begin{cases}
+            \theta_1=\dfrac{\pi}{\theta_0}
+            \\
+            \\
+            tan(\theta)=\dfrac{r}{L}
+            \\
+            \\
+            r=L tan(\theta)
+            \\
+            \\
+            dq=\sigma \left(2 \scriptr tan(\theta_0) sec(\theta_0)\right) L dL
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        All the horizontal forces cancel each other out so we have $\overrightarrow{\scriptr}=l \hat{L}$ (Due to symmetry)
+        \\
+        \\
+        $
+          \overrightarrow{E}(\overrightarrow{r})=\dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{1}{\scriptr^2} \hat{\scriptr} dq
+          =\dfrac{1}{4 \pi \epsilon_0} \bigints\limits_{0}^{L} \dfrac{\hat{z}}{L^2} \sigma \scriptr L dL
+          \\
+          \\
+          \\
+          =\dfrac{\sigma \scriptr}{4 \pi \epsilon_0} ln\left(\dfrac{L}{o}\right) \hat{z}
+          \\
+          \\
+          \\
+          \therefore ~~~~ \overrightarrow{E}(\overrightarrow{r})=\dfrac{\sigma tan(\theta_0) sec(\theta_0)}{2 \epsilon_0} ln\left(\dfrac{L}{0}\right) \hat{z}
+        $
+        \\
+        \\
+        What we found diverges to $infty$. 
+        \\
+        \\
+        $
+          \therefore ~~~ \overrightarrow{F}=q \overrightarrow{E}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{F}=\dfrac{q ~ \sigma ~ tan(\theta_0) sec(\theta_0)}{2 \epsilon_0} ln\left(\dfrac{L}{0}\right) \hat{z}
+        $
+        \\
+        \\
+      }
+
+    \pagebreak
 
     \item Suppose the semi-positive x-axis, $x\geq 0$, has linear charge density $\lambda$.
     Find the electric field at a point with $x=0$ but at a distance $L$ from the origin.
@@ -685,6 +743,9 @@
             +\dfrac{x}{L \sqrt{L^2+x^2}} \hat{z}
           \right] ~~~ \checkmark
         $
+        \\
+        \\
+        \\
       }
 
     \item Let the electric field, expressed in spherical coordinates, be
@@ -736,6 +797,9 @@
             1+\dfrac{2sin(\phi)}{3} \left(2 cos^2(\theta)-sin^2(\theta)-\dfrac{1}{2}\right)
           \right] ~~~ \checkmark
         $
+        \\
+        \\
+        \\
       }
 
     \item Look up the mass and charge of a proton and the values of the appropriate constants for this problem.
