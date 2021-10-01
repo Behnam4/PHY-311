@@ -1,0 +1,131 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Classical Parts/Field/Matter II}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Problem Set 2}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Maulik Parikh}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item Does the function $f(x,y)=2(x^2+y^2)$ satisfy the two-dimensional Laplace’s equation? Check that the function 
+    $g(x, y)=x^2-y^2$ does. Sketch the latter function, calculate the gradient at the points $(0, 1), ~ (1, 0), ~ (0, -1),$ 
+    and $(-1, 0)$  and indicate by little arrows the directions in which these gradients point.
+    \\
+    Within the square bounded by the lines $x=\pm 1$ and $y=\pm 1$, where is $g$
+    maximum and where is it a minimum?
+    \\
+    What do you notice about the location of these points that is characteristic of solutions to Laplace’s equation?
+
+    \item A charge $q$ is placed at the origin, exactly between two parallel, conducting infinite $x−y$ planes, which are separated by a 
+    distance 2d in the $z$-direction (so the charge is a distance $d$ away from each plane). Suppose we are interested in the region 
+    between the conducting planes, $−d < z < d$. Determine the charges and locations of the image charges
+    that would allow us to do away with the conducting planes.
+
+
+    \item We want to design a spherical capacitor with an outer conducting shell of given radius a and an inner conducting sphere of 
+    unknown radius $b$. Suppose we want our capacitor to store the maximum possible energy subject to the constraint that the electric 
+    field at the surface of the inner sphere not exceed $E_0$. Find the radius $b$ for the inner sphere as well as the total amount of 
+    electrical energy stored in the capacitor.
+
+
+    \item Is the following argument correct? Explain in detail. A point charge $q$ is located at an off-center position inside an 
+    uncharged conducting spherical shell. We know the potential must be constant on the inner surface of the shell. Therefore, by the 
+    uniqueness theorem, the potential is constant in the hollow interior as well. Hence the electric field inside is zero and the 
+    charge therefore experiences no force
+
+
+    \item A point charge $−2q$ is placed at the origin and a point charge $3q$ is
+    place on the $z$-axis at $(0, 0, b$). Calculate
+    \begin{enumerate}
+      \item The monopole moment
+
+
+      \item The dipole moment
+
+
+      \item And the approximate electric potential at large r to order $(1/r2)$
+      in spherical coordinates
+      
+    \end{enumerate}
+
+
+
+    \item A spherical shell has radius $R$ and uniform surface charge density $\sigma$. Find the electric potential 
+    at a point on the surface
+    \begin{enumerate}
+      \item By using the symmetry of the problem
+      
+      \item By brute-force integration using $\rho=\sigma \delta(r-R)$ where $\delta$ is the
+      radial Dirac-delta function obeying $\bigints\limits_{0}^{\infty} \delta(r-R)dr=1$
+    \end{enumerate}
+
+
+
+    \item An infinite hollow rectangular pipe runs along the $x$-axis from $-\infty < x < \infty$. Suppose that three sides of the pipe 
+    (at $y=0$, $z=0$, and $y=a$) are made of metal. If the fourth side (at $z=b$) is kept at the constant potential $V_0$, find the 
+    electric potential inside the pipe.
+
+
+    \item A conducting hollow shell of radius $R$ has charge $Q$. We want to know why the shell doesn’t just spontaneously discharge 
+    by having its charge go off into the space around it. (For this problem, we’ll think in terms of classical electrostatics, 
+    ignoring the atomic structure of the conductor.) Suppose we try to peel off a charge q. Charge conservation
+    says that $Q−q$ remains on the shell. Calculate the potential energy (not electric potential) for the removed charge as a 
+    function of distance $r$ from the center of the shell (for $r > R$). Be sure to take into account both the remaining charge on 
+    the shell and the surface charge induced on it by the removed charge q (see Griffiths Example 3.2 for help with
+    the corresponding image charge). Show that there is an energy barrier preventing the shell from spontaneously discharging.
+  
+
+
+  \end{enumerate}
+
+\end{document}
