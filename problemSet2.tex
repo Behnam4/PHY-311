@@ -195,13 +195,107 @@
       }
 
     \item A charge $q$ is placed at the origin, exactly between two parallel grounded conducting infinite $x−y$ planes, which are separated by a 
-    distance 2d in the $z$-direction (so the charge is a distance $d$ away from each plane). Suppose we are interested in the region 
+    distance $2d$ in the $z$-direction (so the charge is a distance $d$ away from each plane). Suppose we are interested in the region 
     between the conducting planes, $−d < z < d$. Determine the charges and locations of the image charges
     that would allow us to do away with the conducting planes.
 
-      % \textcolor{hwColor}{
-
-      % }
+      \textcolor{hwColor}{
+        \includegraphics[height=6cm, width=10cm]{Three.JPG}
+        \\
+        We use \emph{the method of images} for this problem. We have two infinite planes metal parallel to the $x-y$ plane. A point charge $q$ is located
+        at the origin. The boundary conditions for this configuration are:
+        \begin{itemize}
+          \item $V=0$ when $z=d$. (since the conducting planes are grounded)
+          \item $V \to 0$ far from the charge that is $x^2+y^2+z^2 >>> d^2$.
+        \end{itemize}
+        Let's now imagine a totally new configuration that looks like this:
+        \\
+        \includegraphics[height=6cm, width=10cm]{Four.JPG}
+        \\
+        The image charge is placed a distance $d$ above the plane. This will cause a zero potential along the entire $x-y$ plane located at $z=d$. In such
+        problems, we first need to determine the boundary conditions.
+        \begin{itemize}
+          \item $V=0$ at $z=d$.
+          \item $V \to 0$ far from the charge that is $x^2+y^2+z^2 >>> d^2$.
+        \end{itemize}
+        Hence, the potential in the region below the plane is given by the superposition of the potential of the charge $q$ and the
+        image charge $-q$. To find $V(x, y, z)$ for $z<d$.
+        \\
+        $
+          q=(0, 0, 0), ~~ -q=(0, 0, 2d)
+          \\
+          \\
+          V(x, y, z)=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{q_1}{\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}}
+            +\dfrac{q_2}{\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}}
+          \right]
+          \\
+          \\
+          \\
+          =\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{+q}{\sqrt{(x-0)^2+(y-0)^2+(z-0)^2}}
+            +\dfrac{-q}{\sqrt{(x-0)^2+(y-0)^2+(z-2d)^2}}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ V(x, y, z)=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{+q}{\sqrt{x^2+y^2+z^2}}
+            +\dfrac{-q}{\sqrt{x^2+y^2+(z-2d)^2}}
+          \right] ~~~~ \checkmark
+        $
+        \\
+        \\
+        So now that we determined what the potential is for the second configuration, we can check it with our previous 
+        boundary conditions. Our previous boundry condition said 
+        \begin{itemize}
+          \item (A) ~~~ $V=0$ when $z=d$ and $z=-d$ (since the conducting planes are grounded) 
+          \item (B) ~~~ $V \to 0$ far from the charge that is $x^2+y^2+z^2 >>> d^2$. 
+        \end{itemize}
+        \textbf{Checking (A):}
+        \\
+        \\
+        $
+          V(x, y, z)=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{+q}{\sqrt{x^2+y^2+d^2}}
+            +\dfrac{-q}{\sqrt{x^2+y^2+(d-2d)^2}}
+          \right]=0
+        $
+        \\
+        \\
+        Well the first condition (A) is satisfied.
+        \\
+        \\
+        \textbf{Checking (B):}
+        \\
+        \\
+        $
+          V(x, y, z)=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{+q}{\sqrt{x^2+y^2+z^2}}
+            +\dfrac{-q}{\sqrt{x^2+y^2+z^2}}
+          \right]=0 ~~~ \textbf{As $x^2+y^2+z^2 >> d^2$}
+        $
+        \\
+        \\
+        By comparing the two configurations we can tell that they both have the exact same boundary conditions. And since 
+        the potential we found satisfies both boundary conditions, according to the first uniqueness theorem, $V$ must be 
+        the exact same potential for the first setup as well.
+        \\
+        \\
+        Time to study the locations of the image charges. We need an infinite number of charges $\pm q$ located at increasing
+        distances on the $z$ axis. Let's start by putting $-q$ at $(0, 0, 2d)$. This charge insures the upper conducting plane
+        has a zero potential. Now the lower plane is no longer an equipotential due to the two charges. We can place two other 
+        charges at $-2d$ and $-4d$ to make the lower plane an equipotential. But there is an issue now! The upper plane is no longer
+        an equipotential. Therefore, we can add two more charges on the top of the upper plane. We keep adding pairs of 
+        $\pm q$ image charges at distances further and further away from the two planes. 
+        \\
+        \\
+        The farther the image charges are from the conducting planes, the less they will contribute to the potential in 
+        the space between the plates.
+        \\
+        \includegraphics[height=14cm, width=10cm]{five.JPG}
+        \\
+      }
 
     \item We want to design a spherical capacitor with an outer conducting shell of given radius a and an inner conducting sphere of 
     unknown radius $b$. Suppose we want our capacitor to store the maximum possible energy subject to the constraint that the electric 
