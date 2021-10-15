@@ -178,7 +178,7 @@
         We learned from the textbook that Laplace’s equation tolerates \emph{no local maxima or minima}. Extreme values must 
         occur at the boundries. \emph{If a continuous function $f$ has no local extrema in the interior of a closed region 
         $\mathbb{R}^2$, then its maximal and minimal values on $R$ must occur on the boundary of $R$.} Since our boundry is the 
-        square then the maxima must occuer in the sqaure.
+        square then the maxima must occur in the sqaure.
         \\
         \\
         $\forall ~ x,y \in \mathbb{R}, ~ x^2 ~ \text{and} ~ y^2 \in \mathbb{R}^+$ therefore,
@@ -293,18 +293,152 @@
         The farther the image charges are from the conducting planes, the less they will contribute to the potential in 
         the space between the plates.
         \\
-        \includegraphics[height=14cm, width=10cm]{five.JPG}
+        \includegraphics[height=14cm, width=10cm]{Five.JPG}
         \\
       }
 
-    \item We want to design a spherical capacitor with an outer conducting shell of given radius a and an inner conducting sphere of 
-    unknown radius $b$. Suppose we want our capacitor to store the maximum possible energy subject to the constraint that the electric 
-    field at the surface of the inner sphere not exceed $E_0$. Find the radius $b$ for the inner sphere as well as the total amount of 
+    \pagebreak
+
+    \item We want to design a spherical capacitor with an outer conducting shell of given radius $R_2$ and an inner conducting sphere of 
+    unknown radius $R_1$. Suppose we want our capacitor to store the maximum possible energy subject to the constraint that the electric 
+    field at the surface of the inner sphere not exceed $E_0$. Find the radius $R_1$ for the inner sphere as well as the total amount of 
     electrical energy stored in the capacitor.
 
-      % \textcolor{hwColor}{
-
-      % }
+      \textcolor{hwColor}{
+        \\
+        \includegraphics[height=7cm, width=7cm]{Six.jpg}
+        \\
+        The two shells are charged so the inner shell has $+q$ charge and the outter one has $-q$ charge.
+        Recall that Gauss's law states that the electric flux through a closed surface equals total enclosed charge divided 
+        by electrical permittivity of vacuum. 
+        $$
+          \phi=\bigoint\limits_{Surface} \overrightarrow{E} . d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enclosed}
+        $$
+        By imagining a spherical surface (Gaussian sphere) between the two shells with radius $r$ we can calculate $\overrightarrow{E}$:
+        \\
+        \\
+        $
+          \bigoint\limits_{Surface} \overrightarrow{E} . d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enclosed}
+          \\
+          \\
+          \\
+          \bigints\limits_{Surface} |E| da=\dfrac{1}{\epsilon_0} q \Longrightarrow |E| ~ 4 \pi r^2=\dfrac{1}{\epsilon_0} q
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{E}=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{r^2} \hat{r} ~~~~ R_1<r<R_2 ~~~~ \checkmark
+        $ 
+        \\
+        \\
+        Now we are set to find the potential differnce between the two shells. On page 105 of the textbook we learned how to find the potential 
+        difference between them.
+        \\
+        \\
+        $
+          V=V_+-V_-=-\bigints\limits_{(-)}^{(+)} \overrightarrow{E} . d\overrightarrow{a}
+          =\bigints\limits_{(+)}^{(-)} \overrightarrow{E} . d\overrightarrow{a}
+          \\
+          \\
+          \\
+          =\bigints\limits_{R_1}^{R_2} \left(\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{r^2} \hat{r}\right).d\overrightarrow{a}
+          =\dfrac{q}{4 \pi \epsilon_0} ~~ \bigints\limits_{R_1}^{R_2} \dfrac{1}{r^2} \hat{r}.d\overrightarrow{r}
+          \\
+          \\
+          \\
+          =\dfrac{q}{4 \pi \epsilon_0} ~~ \bigints\limits_{R_1}^{R_2} \dfrac{1}{r^2}  dr
+          =\dfrac{q}{4 \pi \epsilon_0} ~~ \dfrac{-1}{r} \Big|_{R_1}^{R_2}
+          \\
+          \\
+          \\
+          \therefore ~~~ V=\dfrac{q}{4 \pi \epsilon_0} \left(-\dfrac{1}{R_2}+\dfrac{1}{R_1}\right) ~ > 0
+        $
+        \\
+        \\
+        From chapter 2, page 107 we know that the total energy of the system as 
+        \\
+        \\
+        $
+          U=\dfrac{1}{2} C V^2=\dfrac{1}{2}Q V=\dfrac{1}{2}\dfrac{Q^2}{C}
+        $
+        \\
+        \\
+        We are told that the electric potential does not exceed $E_0$. We already found $E ~~ R_1<r<R_2$. By plugging $E_0$ into it, 
+        we have:
+        \\
+        \\
+        $
+          |E_0|=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{R^2_1}
+          \\
+          \\
+          \therefore ~~~ q=4 \pi \epsilon_0 E_0 R^2_1 ~~~~ \checkmark
+        $
+        \\
+        \\
+        Now we can calculate the electrical energy stored in the capacitor subject to the constraint.
+        \\
+        \\
+        $
+          U=\dfrac{1}{2} q V
+          =\dfrac{1}{2} 
+          \left(4 \pi \epsilon_0 E_0 R^2_1\right) 
+          \left[\dfrac{q}{4 \pi \epsilon_0} \left(-\dfrac{1}{R_2}+\dfrac{1}{R_1}\right)\right]
+          \\
+          \\
+          \\
+          =\dfrac{1}{2} \left(4 \pi \epsilon_0 E_0 R^2_1\right) 
+          \left[\dfrac{4 \pi \epsilon_0 E_0 R^2_1}{4 \pi \epsilon_0} \left(-\dfrac{1}{R_2}+\dfrac{1}{R_1}\right)\right]
+          \\
+          \\
+          \\
+          =\dfrac{1}{2} \left(4 \pi \epsilon_0 E_0 R^2_1\right) 
+           \times E_0 R^2_1 \left(\dfrac{-R_1+R_2}{R_1 R_2}\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ U=2 \pi \epsilon_0 ~ \dfrac{E^2_0 R^3_1}{R_2} \left(-R_1+R_2\right) ~~~~ \checkmark
+        $
+        \\
+        \\
+        We know from calculus that by equating the first derivative to zero we can find maxima and minima. By setting the first derivative 
+        of $U$ with respect to $R_1$ we can calculate the radius $R_1$ to store the maximum possible energy.
+        \\
+        \\
+        $
+          \dfrac{dU}{dR_1}=\dfrac{d}{dR_1} \left[2 \pi \epsilon_0 ~ \dfrac{E^2_0 R^3_1}{R_2} \left(-R_1+R_2\right)\right]
+          \\
+          \\
+          \\
+          =2 \pi \epsilon_0 \dfrac{E^2_0}{R_2} \dfrac{d}{dR_1} \left[-R^4_1+R^3_1 R_2\right]
+          =2 \pi \epsilon_0 \dfrac{E^2_0}{R_2} \left(-4 R^3_1+ 3 R^2_1 R_2\right)
+          =2 \pi \epsilon_0 \dfrac{E^2_0 R^2_1}{R_2} \left(-4R_1+ 3R_2\right)
+          \\
+          \\
+          \\
+          \dfrac{dU}{dR_1}=0 \Longrightarrow 2 \pi \epsilon_0 \dfrac{E^2_0 R^2_1}{R_2} \left(-4R_1+ 3R_2\right)=0
+          \\
+          \\
+          \\
+          \therefore ~~~ -4R_1+ 3R_2=0 
+          \\
+          \\
+          \\
+          \therefore ~~~ R_1=\dfrac{3}{4} R_2 ~~~~ \checkmark
+        $
+        \\
+        \\
+        We are almost done. Time to calculate the total amount of electrical energy stored in the capacitor.
+        \\
+        \\
+        $
+          U=2 \pi \epsilon_0 ~ \dfrac{E^2_0 \left(\dfrac{3}{4} R_2\right)^3}{R_2} \left[-\left(\dfrac{3}{4} R_2\right)+R_2\right]
+          =2 \pi \epsilon_0 ~ \dfrac{E^2_0 \dfrac{27}{64} R^3_2}{R_2} \left[\dfrac{1}{4}R_2\right]
+          \\
+          \\
+          \\
+          \therefore ~~~ U=2 \pi \epsilon_0 \dfrac{27 E^2_0 ~ R^3_2}{256} ~~~~ \checkmark
+        $
+        \\
+      }
 
 
     \item Is the following argument correct? Explain in detail. A point charge $q$ is located at an off-center position inside an 
