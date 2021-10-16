@@ -625,9 +625,127 @@
     (at $y=0$, $z=0$, and $y=a$) are made of metal. If the fourth side (at $z=b$) is kept at the constant potential $V_0$, find the 
     electric potential inside the pipe.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        \includegraphics[height=6cm, width=8cm]{Nine.jpg}
+        \\
+        We are asked to find the electric potential inside the pipe. One page 136 of the textbook there is a similar problem.
+        So we are following the steps provided in its solutions.
+        \\
+        \\
+        $
+          \dfrac{\partial^2 V}{\partial x^2}+\dfrac{\partial^2 V}{\partial y^2}+\dfrac{\partial^2 V}{\partial z^2}=0
+        $
+        \\
+        \\
+        But since in this problem the Laplacian is independent of x we have:
+        \\
+        \\
+        $
+          \dfrac{\partial^2 V}{\partial y^2}+\dfrac{\partial^2 V}{\partial z^2}=0
+        $
+        \\
+        \\
+        Subject to the boundary conditions:
+        \\
+        \\
+        $
+          \begin{cases}
+            V(y,b)=V_0
+            \\
+            \\
+            V(y, 0)=0
+            \\
+            \\
+            V(a,z)=0
+            \\
+            \\
+            V(0, z)=0
+          \end{cases}
+          \\
+          \\
+          \\
+          \dfrac{\partial^2 YZ}{\partial y^2}+\dfrac{\partial^2 YZ}{\partial z^2}=0 
+          \Longrightarrow Z ~ \dfrac{\partial^2 Y}{\partial y^2}+Y ~ \dfrac{\partial^2 Z}{\partial z^2}=0
+          \\
+          \\
+          \\
+          \dfrac{Z}{ZY} ~ \dfrac{\partial^2 Y}{\partial y^2}+\dfrac{Y}{ZY} ~ \dfrac{\partial^2 Z}{\partial z^2}=0
+          \\
+          \\
+          \\
+          Y^{-1} ~ \dfrac{\partial^2 Y}{\partial y^2}+Z^{-1} ~ \dfrac{\partial^2 Z}{\partial z^2}=0
+          \\
+          \\
+          \\
+          \begin{cases}
+            c_1=Y^{-1} ~ \dfrac{\partial^2 Y}{\partial y^2}
+            \\
+            \\
+            c_2=Z^{-1} ~ \dfrac{\partial^2 Z}{\partial z^2}
+            \\
+            \\
+            c_1+c_2=0
+          \end{cases}
+        $
+        \\
+        \\
+        To make our lives easier let's define $c_1=-k^2$ and $c_2=k^2$. Therefore:
+        \\
+        \\
+        $
+          \begin{cases}
+            Y(y)=c ~ sin(ky)+D ~ cos(ky)
+            \\
+            \\
+            Z(z)=A ~ e^{kz}+B ~ e^{-kz}
+          \end{cases}
+          \\
+          \\
+          \\
+          V(y,z)=\left[C ~ sin(ky)+D ~ cos(ky)\right] \times \left[A ~ e^{kz}+B ~ e^{-kz}\right]
+        $
+        \\
+        \\
+        Time to apply the boundary conditions:
+        \\
+        \\
+        $
+           V(y, 0)=\left[C ~ sin(ky)+D ~ cos(ky)\right] \times \left[A ~ e^{k0}+B ~ e^{-k0}\right] \Longrightarrow A+B=0 ~~~~ \checkmark
+           \\
+           \\
+           \\
+           \\
+           V(0, z)=\left[C ~ sin(k0)+D ~ cos(k0)\right] \times \left[A ~ e^{kz}+B ~ e^{-kz}\right] \Longrightarrow D=0 ~~~~ \checkmark
+           \\
+           \\
+           \\
+           \\
+          V(a, z)= \left[sin(ka)\right] \times AC \left[e^{kz}-e^{-kz}\right]=0
+          \\
+          \\
+          \\
+          \\
+          V(y,z)=\sum\limits_{n=1}^{\infty} C_n ~ sinh(\dfrac{n \pi z}{a}) ~ sin(\dfrac{n \pi y}{a})
+          \\
+          \\
+          \\
+          \therefore ~~~ C_n=\dfrac{2 V_0}{a ~ sinh(\dfrac{n \pi b }{a})} \bigints\limits_{0}^{a} sin(\dfrac{n \pi y}{a}) dy
+          \\
+          \\
+          \\
+          =\dfrac{2 a V_0}{a n \pi ~ sinh(\dfrac{n \pi b}{a})} \times \left[-cos(\dfrac{n \pi y}{a})\right] \Big|_{0}^{a}
+          \\
+          \\
+          \\
+          \therefore ~~~ C_n=\dfrac{2 V_0}{n \pi sinh(\dfrac{n \pi b}{a})} \left[1-(-1)^n\right] ~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ V(y,z)=\sum\limits_{n=\text{odd}}^{\infty} \dfrac{4 V_0}{n \pi sinh(\dfrac{n \pi b}{a})} 
+          ~ sinh(\dfrac{n \pi a}{a}) ~ sin(\dfrac{n \pi y}{a}) ~~~~ \checkmark
+        $
+      }
 
 
     \item A conducting hollow shell of radius $R$ has charge $Q$. We want to know why the shell doesn’t just spontaneously discharge 
