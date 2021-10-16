@@ -449,29 +449,25 @@
 
       \textcolor{hwColor}{
         \\
-        \includegraphics[height=5cm, width=7cm]{Seven.JPG}
+        \includegraphics[height=4cm, width=7cm]{Seven.JPG}
         \\
-        The offset charge produces a non-spherically symmetric field. This field in turn induces a non-spherically symmetric charge distribution 
-        on the internal surface. But the charge to create this field has to come from somewhere. There is no effect of the interior charge 
-        and the inner induced charge in all space beyond the inner surface. It effectively doesn't exist. But the charge accumulated on 
-        the interior surface had to come from some where. There were random changes in the previously neutral charge distribution within 
-        the volume. These charges affect each other even though they aren't effected by charges closer to the center. If you place charge
-        in a conductor, it will distribute itself evenly on the outer surface seeking to minimize the potential energy.
+        On page 100 of the textbook, we have the above figure (similar to this problem). We have a electric charge $+q$ located off-center.
+        Let's recall what the uniqueness theorem states (second). It states that \emph{in a volume $V$ surrounded 
+        by conductors and containing a specific charge density $\rho$, the electric field is uniquely determined 
+        if the total charge on each counductor is given.} 
         \\
-        With the help of the Method of Images we can state that since the electric field is zero within the conductor, the electric potential is constant within
-        the conductor. We only care about differences in potential, so we can call this potential zero. Given our internal charge, we can calculate 
-        the electric potential on the inner surface due to the internal charge. Now consider an infinite line from the center of the sphere 
-        through the internal charge. Where on this line do we need to put a new charge so that its potential plus the potential of the internal 
-        charge is zero at the points where the line intersects the internal surface? We have an equation at each point of intersection. Our 
-        equations will have two unknowns. Solve the equations for two unknowns and we will know where on the line to place the charge and how much
-        charge to put. Now calculate the electric field due to the placement of this Image Charge and the original charge and we have the field 
-        due to the original charge and the real induced charge. In some ways a point charge is equivalent to the induced charge.
-        \begin{itemize}
-          \item $E=0$ inside conducting shell.
-          \item Charge density induced on inner surface non-uniform.
-          \item Charge density induced on outer surface uniform.
-          \item $E$ outside has spherical symmetry centered on spherical conducting shell.
-        \end{itemize}
+        \\
+        $+q$ attracts minus charges over to the near side and repel plus charges to the far side. Now there is a net force of attraction 
+        between the test charge and the minus charges. In case, there is a cavity with some charge, then the field in the cavity is not zero.
+        But the very important point is that the cavity and whatever inside it are electrically isolated from the outside world by the surrounding 
+        conductor. 
+        \\
+        \\
+        $Q_{enc}=q+q_{induced} \Longrightarrow q_{induced}=-q$. This means that the conductor as a whole is electrically neutral
+        therefore, there must be a charge $+q$ on its outer surface. Based on what we discussed here the test charge $q$ experiences
+        a force exerting from the outer surface on it, hence the argument is not correct. 
+        \\
+        \\
       }
 
 
@@ -609,14 +605,48 @@
             \\
             \therefore ~~~ V=\dfrac{\rho}{\epsilon_0} \dfrac{R^2}{r} ~~~~ \checkmark
           $
+          \\
+          \\
+          At the surface $r=R$, hence,
+          \\
+          \\
+          $
+            \therefore ~~~ V=\dfrac{\rho}{\epsilon_0} R ~~~~ \checkmark
+            \\
+          $
         }
       
       \item By brute-force integration using $\rho=\sigma \delta(r-R)$ where $\delta$ is the
       radial Dirac-delta function obeying $\bigints\limits_{0}^{\infty} \delta(r-R)dr=1$
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          On page 85 of the textbook we leanred for a volume charge we have 
+          \\
+          \\
+          $
+            V(r)=\dfrac{1}{4 \pi \epsilon_0} \bigints \dfrac{\rho(r^')}{r} d\tau^'
+            \\
+            \\
+            \\
+            =\dfrac{1}{4 \pi \epsilon_0} 
+            \bigints\limits_{0}^{2 \pi} 
+            \bigints\limits_{0}^{\pi} 
+            \bigints\limits_{0}^{R}
+            \dfrac{\rho ~ \delta(r-R)}{r} ~ r^2 sin(\theta) d\theta ~ d\phi ~ dr
+            \\
+            \\
+            \\
+            =\dfrac{\rho}{4 \pi \epsilon_0} 
+            \left[2 \pi\right]
+            \left[-cos(\pi)+cos(0)\right]
+            \left[R\right]
+            \\
+            \\
+            \\
+            \therefore ~~~ V(r)=\dfrac{\rho}{\epsilon_0} R ~~~~ \checkmark
+          $
+        }
     \end{enumerate}
 
 
@@ -744,6 +774,7 @@
           \\
           \therefore ~~~ V(y,z)=\sum\limits_{n=\text{odd}}^{\infty} \dfrac{4 V_0}{n \pi sinh(\dfrac{n \pi b}{a})} 
           ~ sinh(\dfrac{n \pi a}{a}) ~ sin(\dfrac{n \pi y}{a}) ~~~~ \checkmark
+          \\
         $
       }
 
@@ -756,9 +787,19 @@
     the shell and the surface charge induced on it by the removed charge q (see Griffiths Example 3.2 for help with
     the corresponding image charge). Show that there is an energy barrier preventing the shell from spontaneously discharging.
   
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Previously, we have seen that when $r>R$ we have:
+        \\
+        \\
+        $
+          V=\dfrac{1}{4 \pi \epsilon_0} \dfrac{Q}{r}
+          \\
+          \\
+          \\
+          F=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q ~ q^'}{(r^')^2}
+        $
+      }
 
   \end{enumerate}
 
