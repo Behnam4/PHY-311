@@ -466,7 +466,6 @@
         equations will have two unknowns. Solve the equations for two unknowns and we will know where on the line to place the charge and how much
         charge to put. Now calculate the electric field due to the placement of this Image Charge and the original charge and we have the field 
         due to the original charge and the real induced charge. In some ways a point charge is equivalent to the induced charge.
-        \\
         \begin{itemize}
           \item $E=0$ inside conducting shell.
           \item Charge density induced on inner surface non-uniform.
@@ -481,42 +480,142 @@
     \begin{enumerate}
       \item The monopole moment.
  
-        % \textcolor{hwColor}{
-
-        % }
+        \textcolor{hwColor}{
+          \\
+          The monopole moment refers to the total charge so we have:
+          \\
+          \\
+          $
+            Q=3q+(-2g) \Longrightarrow Q=q
+            \\
+          $
+        }
 
 
       \item The dipole moment.
 
-        % \textcolor{hwColor}{
+        \textcolor{hwColor}{
+          \\
+          For the dipole moment we have:
+          \\
+          \\
+          $
+            p=\sum\limits_{n=1}^{2} ~ q_n r^'_n
+            \\
+            \\
+            \\
+            =-2q (0, 0, 0)+3q(0, 0, b)=-2q (0 ~ \hat{x}, 0 ~ \hat{y}, 0 ~ \hat{z})+3q(0 ~ \hat{x}, 0 ~ \hat{y}, b ~ \hat{z})
+            \\
+            \\
+            \\
+            \therefore ~~~ p=3q b \hat{z} ~~~~ \checkmark
+            \\
+          $
+        }
 
-        % }
 
+      \item And the approximate electric potential at large r to order $(1/r2)$ in spherical coordinates.
 
-      \item And the approximate electric potential at large r to order $(1/r2)$
-      in spherical coordinates.
-
-        % \textcolor{hwColor}{
-
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            V=V_{mon}+V_{dip}
+            =\dfrac{1}{4 \pi \epsilon_0} \dfrac{Q}{r}+\dfrac{1}{4 \pi \epsilon_0} \dfrac{p.\hat{r}}{r^2}
+            \\
+            \\
+            \\
+            =\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{r}+\dfrac{1}{4 \pi \epsilon_0} \dfrac{3qb ~ cos(\theta)}{r^2}
+            \\
+            \\
+            \\
+            \therefore ~~~ V=\dfrac{q}{4 \pi \epsilon_0}\left[
+              1
+              +\dfrac{3b ~ cos(\theta)}{r}
+            \right] ~~~~ \checkmark
+          $
+          \\
+          \\
+          Remember the above result is the \emph{approximate} electric potential.
+          \\
+        }
       
     \end{enumerate}
 
 
     \item A spherical shell has radius $R$ and uniform surface charge density $\sigma$. Find the electric potential 
     at a point on the surface
+    \\
+    \includegraphics[height=4cm, width=8cm]{Eight.jpg}
+
     \begin{enumerate}
       \item By using the symmetry of the problem.
 
-        % \textcolor{hwColor}{
-
-        % }
+        \textcolor{hwColor}{
+          \\
+          Gauss's Law is a powerful tool in qualitative studies of the electric field for some charge surmised charge distributions. Gauss's Law
+          leads very quickly to qualitative results if the charge distributions exhibit simple symmetry (spheres, cylinders and large planes) problems.
+          \\
+          \\
+          When $r<R$ we have:
+          \\
+          \\
+          $
+            \bigoint\limits_{S} \overrightarrow{E} . d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enc}
+            =\dfrac{1}{\epsilon_0} \bigints\limits \rho da
+          $
+          \\
+          \\
+          Since there is no charge enclosed (charge is on surface) then we can conclude that:
+          \\
+          \\
+          $
+            \therefore ~~~ E=0 ~~~~ \checkmark
+          $
+          \\
+          \\
+          \\
+          \\
+          For $r>R$ we have:
+          \\
+          \\
+          $
+            \bigoint\limits_{S} \overrightarrow{E} . d\overrightarrow{a}=\dfrac{1}{\epsilon_0} Q_{enc}
+            =\dfrac{1}{\epsilon_0} \bigints\limits \rho da
+            \\
+            \\
+            \\
+            E 4 \pi r^2=\dfrac{4 \pi R^2 \rho}{\epsilon_0}
+            \\
+            \\
+            \\
+            \therefore ~~~ E=\dfrac{\rho}{\epsilon_0} \left(\dfrac{R}{r}\right)^2 ~~~~ \checkmark
+          $
+          \\
+          \\
+          Now by integrating we have voltage.
+          \\
+          \\
+          $
+            V=-\bigints\limits_{\infty}^{r} E.d\ell
+            =-\bigints\limits_{\infty}^{r} \dfrac{\rho}{\epsilon_0} \left(\dfrac{R}{r}\right)^2.d\ell
+            \\
+            \\
+            \\
+            =-\dfrac{\rho}{\epsilon_0} R^2 ~ \bigints\limits_{\infty}^{r} \dfrac{1}{r^2} dr
+            =-\dfrac{\rho}{\epsilon_0} R^2 \left(-\dfrac{1}{r}\right)\Big|_{\infty}^{r}
+            =-\dfrac{\rho}{\epsilon_0} R^2 \dfrac{-1}{r}
+            \\
+            \\
+            \\
+            \therefore ~~~ V=\dfrac{\rho}{\epsilon_0} \dfrac{R^2}{r} ~~~~ \checkmark
+          $
+        }
       
       \item By brute-force integration using $\rho=\sigma \delta(r-R)$ where $\delta$ is the
       radial Dirac-delta function obeying $\bigints\limits_{0}^{\infty} \delta(r-R)dr=1$
 
         % \textcolor{hwColor}{
-
+        %   \\
         % }
     \end{enumerate}
 
@@ -527,7 +626,7 @@
     electric potential inside the pipe.
 
       % \textcolor{hwColor}{
-
+      %   \\
       % }
 
 
@@ -540,7 +639,7 @@
     the corresponding image charge). Show that there is an energy barrier preventing the shell from spontaneously discharging.
   
       % \textcolor{hwColor}{
-
+      %   \\
       % }
 
   \end{enumerate}
