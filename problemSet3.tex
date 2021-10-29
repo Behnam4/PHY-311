@@ -114,16 +114,124 @@
           \\
           \\
           \therefore ~~~ \dfrac{\sigma}{e}=1.24875 \times 10^{14} ~~~ cm^{-2} ~~~~ \checkmark
-        $ 
+        $
+        \\
       }
 
     \item An electric dipole $\overrightarrow{p}$ is at the origin, at one corner of an equilateral triangle of side a, pointing 
-    along one side (which you can take to be along the $\hat{+z}$ direction). A positive test charge qis initially at the corner at 
+    along one side (which you can take to be along the $\hat{+z}$ direction). A positive test charge q is initially at the corner at 
     the other end of that side (i.e. at $z=a$). Calculate the work done in moving the charge to the third corner of the triangle.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        \includegraphics[height=5cm, width=7cm]{2.JPG}
+        \\
+        An electric dipole is a charge distribution that is made up of two equal and opposite point charges.
+        \\
+        \includegraphics[height=5cm, width=7cm]{3.JPG}
+        \\
+        $
+          V=V_++V_-=\dfrac{1}{4 \pi \epsilon_0} \dfrac{q}{r_1}+\dfrac{1}{4 \pi \epsilon_0} \dfrac{-q}{r_2}
+          =\dfrac{q}{4 \pi \epsilon_0} \left[
+            \dfrac{1}{r_1}-\dfrac{1}{r_2}
+          \right]
+          \\
+          \\
+          \\
+          \begin{cases}
+            cos(\theta)=\dfrac{OC}{a}
+            \\
+            \\
+            cos(\theta)=\dfrac{OD}{a}
+          \end{cases} \Longrightarrow \begin{cases}
+            r_1 \approx r-a cos(\theta)
+            \\
+            \\
+            r_2 \approx r+a cos(\theta)
+          \end{cases}
+          \\
+          \\
+          \\
+          V=\dfrac{q}{4 \pi \epsilon_0} \left[
+            \dfrac{1}{r-a cos(\theta)}-\dfrac{1}{r+a cos(\theta)}
+          \right]
+          =\dfrac{q}{4 \pi \epsilon_0} \left[
+            \dfrac{r+a cos(\theta)-\left(r-a cos(\theta)\right)}{r^2-a^2 cos^2(\theta)}
+          \right]
+          =\dfrac{q}{4 \pi \epsilon_0} \left[
+            \dfrac{2a cos(\theta)}{r^2-a^2 cos^2(\theta)}
+          \right]
+        $
+        \\
+        \\
+        From the textbook (page 155) we learned that for a physical dipole we have $p=qd$ where d is the vector from the negative
+        charge to the positive, therefore
+        \\
+        \\
+        $
+          V=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{p cos(\theta)}{r^2-a^2 cos^2(\theta)}
+          \right]
+          \\
+          \\
+          \\
+          \therefore ~~~ V=\dfrac{1}{4 \pi \epsilon_0} \left[
+            \dfrac{p cos(\theta)}{r^2}
+          \right] ~~~~ r>>a
+        $
+        \\
+        \\
+        Since $p.\hat{r}=p cos(\theta)$, where $\hat{r}$ is the unit vector along the OP then electric potential of dipole is
+        \\
+        \\
+        $
+          \therefore ~~~ V=\dfrac{1}{4 \pi \epsilon_0} \dfrac{p.\hat{r}}{r^2} ~~~~ \checkmark
+        $
+        \\
+        \\
+        Voltage is the pressure from an electrical circuit's power source that pushes charged electrons (current) through 
+        a conducting loop. This means that one coulomb of charge will gain one joule of potential energy when it is moved 
+        between two locations where the electric potential difference is one volt. In a static electric field, the work 
+        required to move per unit of charge between two points is known as voltage. Mathematically, the voltage can be expressed 
+        as: (All three angles of an equilateral triangle are $\dfrac{\pi}{3}$)
+        \\
+        \\
+        $
+          \Delta V=\dfrac{W}{Q}  \Longrightarrow W=\Delta V \times Q ~~~~ \checkmark
+          \\
+          \\
+          \\
+          W=q \times \left[
+          \dfrac{1}{4 \pi \epsilon_0} \dfrac{p ~ cos(\theta_f)}{r^2}
+          -\dfrac{1}{4 \pi \epsilon_0} \dfrac{p ~ cos(\theta_i)}{r^2}
+          \right]
+          =q \times \left[
+            \dfrac{1}{4 \pi \epsilon_0} \dfrac{p ~ cos(\pi/3)}{r^2}
+            -\dfrac{1}{4 \pi \epsilon_0} \dfrac{p ~ cos(0)}{r^2}
+          \right]
+          \\
+          \\
+          \\
+          =q \times \left[
+            \dfrac{1}{4 \pi \epsilon_0} \dfrac{p \times \dfrac{1}{2}}{r^2}
+            -\dfrac{1}{4 \pi \epsilon_0} \dfrac{p}{r^2}
+          \right]
+          =\dfrac{q}{4 \pi \epsilon_0} \left[
+            \dfrac{p}{2r^2}-\dfrac{p}{r^2}
+          \right]
+          =\dfrac{q}{4 \pi \epsilon_0} \left[\dfrac{p-2p}{2r^2}\right]
+          \\
+          \\
+          \\
+          \therefore ~~~ W=-\dfrac{1}{4 \pi \epsilon_0} \dfrac{q p}{2r^2} ~~~~ \checkmark
+        $
+        \\
+        \\
+        We know that the direction of an electrical field at a point is the same as the direction of the electrical 
+        force acting on a positive test charge at that point. We have the work done as a negative value which means 
+        the displacement is opposite to the direction of the Force applied.
+        \\ 
+      }
 
     \item Consider a parallel-plate capacitor for which the plates are separated by a vertical distance $2d$. Suppose that the 
     space between the plates is filled with two slabs of linear dielectrics, each of thickness $d$. The upper slab has dielectric 
