@@ -20,7 +20,7 @@
 \newcommand{\scriptr}{\mathcalligra{r}\,}
 \newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
 
-\definecolor{hwColor}{HTML}{AD53BA}
+\definecolor{hwColor}{HTML}{531C55}
 
 \begin{document}
 
@@ -61,9 +61,61 @@
     the molecular dipoles in a cup of water could be made to point down. Calculate the magnitude of the resulting surface charge 
     density at the upper surface of the water. How many electrons per square centimeter does that correspond to?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        \includegraphics[height=5cm, width=6cm]{1.JPG}
+        \\
+        The dipole moment arises because oxygen is more electronegative than hydrogen; the oxygen pulls in the shared electrons 
+        and increases the electron density around itself.The asymmetry of the water molecule leads to a dipole moment in the symmetry 
+        plane pointed toward the more positive hydrogen atoms. The measured magnitude of this dipole moment is
+        $$
+          p=6 \times 10^{-30} ~ C.m 
+        $$
+        By consulting the Periodic Table of elements we get that water has a molecular weight of $18$ grams per mole. 
+        We can convert moles to number of molecules by multiplying by Avogadro’s number.
+        \\
+        \\
+        $
+          n=\dfrac{1}{18} \times 6.02 \times 10^{23} \approx 3.33 \times 10^{22} ~~ \text{molecules per $cm^{-3}$}
+        $
+        \\
+        \\
+        We are told that the dipoles are all point down, therefore the polarization density is:
+        \\
+        \\
+        $
+          P=np=\left(
+            3.33 \times 10^{22} ~~ \text{molecules per $cm^{-3}$}
+          \right) \times 
+          \left(
+            6 \times 10^{-30} ~ C.m 
+          \right)
+          \\
+          \\
+          =\left(
+            3.33 \times 10^{22} ~~ \text{molecules per $cm^{-3}$}
+          \right) \times 
+          \left(
+            6 \times 10^{-28} ~ C.cm 
+          \right)
+          \\
+          \\
+          \\
+          \therefore ~~~ P=1.998 \times 10^{-5} ~~~ C/cm^2 ~~~~ \checkmark
+        $
+        \\
+        \\
+        What we have now is the surface charge density $\sigma$. The number of electrons per square centimeter is:
+        \\
+        \\
+        $
+          \dfrac{\sigma}{e}=\dfrac{1.998 \times 10^{-5} ~~~ C/cm^2}{1.60 \times 10^{-19} ~~~ C}
+          \\
+          \\
+          \\
+          \therefore ~~~ \dfrac{\sigma}{e}=1.24875 \times 10^{14} ~~~ cm^{-2} ~~~~ \checkmark
+        $ 
+      }
 
     \item An electric dipole $\overrightarrow{p}$ is at the origin, at one corner of an equilateral triangle of side a, pointing 
     along one side (which you can take to be along the $\hat{+z}$ direction). A positive test charge qis initially at the corner at 
