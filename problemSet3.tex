@@ -113,7 +113,7 @@
           \\
           \\
           \\
-          \therefore ~~~ \dfrac{\sigma}{e}=1.24875 \times 10^{14} ~~~ cm^{-2} ~~~~ \checkmark
+          \therefore ~~~ \dfrac{\sigma}{e}=1.24875 \times 10^{14} ~~~ electrons/cm^{2} ~~~~ \checkmark
         $
         \\
       }
@@ -270,15 +270,82 @@
   
     \end{enumerate}
 
-    \item A particle of charge qand rest mass mis moving with velocity $\overrightarrow{v}$ in a region where there 
+    \item A particle of charge q and rest mass mis moving with velocity $\overrightarrow{v}$ in a region where there 
     is a uniform magnetic field $\overrightarrow{B}$ perpendicular to $\overrightarrow{v}$. The Lorentz force causes 
     the particle to move in a circular path. Find the time required to complete one revolution. Specifically, consider
     a proton moving at a speed of $10,000 ~ km/s$ (which is still far slower than the speed of light, so ignore relativistic 
     effects) through a perpendicular interstellar magnetic field of strength $10^{-9} T$. Find the orbital time for the proton.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        For a particle in uniform circular motion we have:
+        \\
+        \\
+        $
+          \overrightarrow{F_B}=q \left(
+            \overrightarrow{v} \times \overrightarrow{B}
+          \right)
+        $
+        \\
+        \\
+        Since the field is perpendicular to $\overrightarrow{v}$ we have:
+        \\
+        \\
+        $
+          \overrightarrow{F_B}=q v B sin(\dfrac{\pi}{2}) \Longrightarrow \overrightarrow{F_B}=q v B
+        $
+        \\
+        \\
+        We know that a centripetal force $F_C$ is a force that makes a body follow a curved path. Since we are in a circular path we can state that:
+        \\
+        \\
+        $
+          F_B=F_C=\dfrac{mv^2}{r} \Longrightarrow q v B=\dfrac{mv^2}{r}
+          \\
+          \\
+          \\
+          \therefore ~~~~  r=\dfrac{mv}{qB} ~~~~ \checkmark
+        $
+        \\
+        \\
+        $r$ is the radius of curvature of the path of a charged particle with mass $m$ and charge $q$, moving at a speed $v$ that is 
+        perpendicular to a magnetic field of strength $B$. We can define the time for the charged particle that goes around the circular path
+        as the period which is equal to the distance traveled divided by the speed.
+        \\
+        \\
+        $
+          T=\dfrac{2 \pi r}{v}=\dfrac{2 \pi \left(\dfrac{mv}{qB}\right)}{v}
+          \\
+          \\
+          \\
+          \therefore ~~~ T=\dfrac{2 \pi m}{q B} ~~~~ \checkmark
+          \\
+        $
+        \\
+        We are asked to find the orbital time for a proton moving at a speed of 10000 $km/s$.
+        \\
+        \\
+        $
+          \begin{cases}
+            m_{proton}=1.6726219 × 10^{-27} ~ kg
+            \\
+            \\
+            q_{proton}=1.602176634×10^{−19} ~ C
+            \\
+            \\
+            B=10^{-9} ~ T
+          \end{cases}
+          \\
+          \\
+          \\
+          T=\dfrac{2 \pi m}{q B}=\dfrac{\left(2 \pi\right) ~ \left(1.6726219 × 10^{-27} ~ kg\right)}{\left(1.602176634×10^{−19} ~ C\right) ~ \left(10^{-9} ~ T\right)}
+          \\
+          \\
+          \\
+          \therefore ~~~ T=65.5944 ~ s
+        $
+        \\ 
+      }
 
     \item A cube of side $L$, centered at the origin, is made of a dielectric with a polarization $\overrightarrow{P}=k \overrightarrow{r}$.
     Find the bound charges and check that they add up to zero.
