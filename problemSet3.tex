@@ -233,6 +233,8 @@
         \\ 
       }
 
+    \pagebreak
+
     \item Consider a parallel-plate capacitor for which the plates are separated by a vertical distance $2d$. Suppose that the 
     space between the plates is filled with two slabs of linear dielectrics, each of thickness $d$. The upper slab has dielectric 
     constant $3$ and the lower slab has dielectric constant $2$. If the free charge density on the upper and lower plate is
@@ -240,27 +242,31 @@
     \begin{enumerate}
       \item The electric displacement.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          A
+        }
 
       \item The electric field.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          B
+        }
 
       \item The polarization.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          C
+        }
 
       \item The location and value of the bound charges.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          D
+        }
   
     \end{enumerate}
 
@@ -277,16 +283,100 @@
     \item A cube of side $L$, centered at the origin, is made of a dielectric with a polarization $\overrightarrow{P}=k \overrightarrow{r}$.
     Find the bound charges and check that they add up to zero.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        Any kind of matter is full of positive and negative electric charges. In a dielectric, these charges are bound. They cannot 
+        move separately from each other through any macroscopic distance. Hence when an electric field is applied there is no net electric
+        current. However, the field does push the positive charges just a tiny bit in the direction of $E$ while the negative
+        charges are pushed in the opposite directions. Consequently, the atoms and the molecules
+        comprising the dielectric acquire tiny electric dipole moments in the direction of $E$.
+        \\
+        \includegraphics[height=5cm, width=7cm]{4.JPG}
+        \\
+        We are told that the polarization is $\overrightarrow{P}=k \overrightarrow{r}$, where 
+        $\overrightarrow{r}=x ~ \hat{x}+y ~ \hat{y}+z ~ \hat{z}$. On page 174 of the textbook we have
+        \\
+        \\
+        $
+          \rho_b=-\nabla . P=-\left(
+            \dfrac{\partial}{\partial x}\hat{x}+\dfrac{\partial}{\partial y}\hat{y}+\dfrac{\partial}{\partial z}\hat{z}
+          \right).\left(
+            kx ~ \hat{x}+ky ~ \hat{y}+kz ~ \hat{z}
+          \right)
+          \\
+          \\
+          \\
+          =-\left(
+            \dfrac{\partial ~ kx}{\partial x}+\dfrac{\partial ~ ky}{\partial y}+\dfrac{\partial ~ kz}{\partial z}
+          \right)
+          \\
+          \\
+          \\
+          \therefore ~~~ \rho_b=-3k ~~~~ \checkmark
+        $
+        \\
+        \\
+        The total volume charge is $-3kL^3 ~~~~ (A)$
+        \\
+        \\
+        The surface polarization charge density is calculated by $\sigma_b=P.\hat{n}$ where $\hat{n}$ is a normal outward. There are six 
+        surfaces for a cube.
+        \\
+        \\
+        $
+          \begin{cases}
+            P.\hat{x}=\left(k ~ \dfrac{L}{2} ~ \hat{x}\right).\hat{x}=\dfrac{1}{2}kL
+            \\
+            \\
+            P.\left(\hat{-x}\right)=\left(k ~ \dfrac{-L}{2} ~ \hat{x}\right).\left(\hat{-x}\right)=\dfrac{1}{2}kL
+            \\
+            \\
+            P.\hat{y}=\left(k ~ \dfrac{L}{2} ~ \hat{y}\right).\hat{y}=\dfrac{1}{2}kL
+            \\
+            \\
+            P.\left(\hat{-y}\right)=\left(k ~ \dfrac{-L}{2} ~ \hat{y}\right).\left(\hat{-y}\right)=\dfrac{1}{2}kL
+            \\
+            \\
+            P.\hat{z}=\left(k ~ \dfrac{L}{2} ~ \hat{z}\right).\hat{z}=\dfrac{1}{2}kL
+            \\
+            \\
+            P.\left(\hat{-z}\right)=\left(k ~ \dfrac{-L}{2} ~ \hat{z}\right).\left(\hat{-z}\right)=\dfrac{1}{2}kL
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        And the charge on each face is $q=\dfrac{1}{2}kL^3$ (area). Therefore, total surface charge is
+        \\
+        \\
+        $
+          \sum\limits_{n=1}^{6} q_n=\sum\limits_{n=1}^{6} q_n=6 \times \dfrac{1}{2}kL^3
+          \\
+          \\
+          \\
+          \therefore ~~~ \sum\limits_{n=1}^{6} q_n=3kL^3 ~~~~ (B)
+        $
+        \\
+        \\
+        Now the total is (from (A) and (B))
+        \\
+        \\
+        $
+          Q_{total}=3kL^3+(-3kL^3)
+          \\
+          \\
+          \\
+          \therefore ~~~ Q_{total}=0 ~~~~ \checkmark
+        $
+        \\
+      }
   
     \item Three capacitors have identical area and plate separation. To be definite, let the plate separation direction be 
     the z-direction, and suppose the plates are separated by a distance $d$. Suppose one of the capacitors has only vacuum between the plates. The other two capacitors are
     each half-filled with a linear dielectric material, with dielectric constant $k$. In one of these, the dielectric material is 
     spread across all of one plate but extends only halfway to the other plate (i.e. to $d/2$ in the z-direction). In the other 
     capacitor, the same volume of dielectric material is present but arranged differently, covering only half the plate
-    but extending all the way to the other plate. If the vacuum capacitor has a capacitance of C0, find the capacitance of each 
+    but extending all the way to the other plate. If the vacuum capacitor has a capacitance of $C_0$, find the capacitance of each 
     of the other capacitors.
 
       % \textcolor{hwColor}{
