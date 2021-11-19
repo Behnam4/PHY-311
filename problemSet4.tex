@@ -61,9 +61,53 @@
     power line is transmitting $10 MW$ of power, what is the strength of the
     magnetic field halfway between the conductors?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \includegraphics[height=6cm, width=9cm]{1.JPG}
+        \\
+        We learned in the past that $P=V \times I$ so we have:
+        \\
+        \\
+        $
+          P=V \times I=\dfrac{P}{V}=\dfrac{10 MW}{50 ~ kV}=\dfrac{10 \times 10^6 ~ W}{50 \times 10^3 ~ V}
+          \\
+          \\
+          \\
+          \therefore ~~~ I=200 ~ A ~~~~ \checkmark
+        $
+        \\
+        \\
+        We just found the current in the wires. On page 233 we have the Ampère's law as:
+        \\
+        \\
+        $
+          \bigoint B.d\ell=\mu_0 ~ I_{enc}
+        $
+        \\
+        \\
+        On page 234 we got that $B=\dfrac{\mu_0 I}{2 \pi R}$ which is the magnetic field a distance $R$ from a 
+        long straight wire carrying a steady current. Whatever plane we assume these magnetic fields are on the 
+        net magnetic field is normal to them. Assuming the two magentic fields are on the $x-y$ plane, then 
+        $\overrightarrow{B}=\overrightarrow{B_1}+\overrightarrow{B_2}$ is in the $z$ direction.
+        \\
+        \\
+        $
+          \overrightarrow{B}=\overrightarrow{B_1}+\overrightarrow{B_2}
+          =\dfrac{\mu_0 I}{2 \pi R_1} \hat{z}+\dfrac{\mu_0 I}{2 \pi R_2} \hat{z}
+          =\dfrac{\mu_0 I}{2 \pi R} \hat{z}+\dfrac{\mu_0 I}{2 \pi R} \hat{z}
+          =\dfrac{\mu_0 I}{\pi R} \hat{z}
+          =\dfrac{\mu_0 200}{\pi (1)} \hat{z}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{B}=\dfrac{200 ~ \mu_0}{\pi} \hat{z} ~~~ T ~~~~ \checkmark
+        $
+        \\
+        \\
+        Note: In order to find the numerical value of $\overrightarrow{B}$ we can simply plug in the value of $\mu_0$ which is 
+        $4 \pi \times 10^{-7}$. 
+        \\
+        \\
+      }
 
     \item \textbf{Animal Magnetism}
     \\
