@@ -184,9 +184,94 @@
     \item A uniform current $I$ flows down a wire of radius $R$ made of a linear material with magnetic susceptibility $\chi_m$. Find the 
     magnetic field as a function of $r$. Also find the bound currents. What is the net bound current flowing down the wire?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        $
+          \overrightarrow{B}=\mu ~ \overrightarrow{H}=\mu_0 \left(1+\chi_m\right) \overrightarrow{H}
+          \\
+          \\
+          \\
+          I_{enc}=I ~ \dfrac{2 \pi r^2}{2 \pi R^2}=I ~ \dfrac{r^2}{R^2}
+          \\
+          \\
+          \\
+          \bigoint H.d\ell=I_{enc} \Longrightarrow |H|=\dfrac{1}{2 \pi r} I_{enc}
+        $
+        \\
+        \\
+        $|H|$ is the direction of $\hat{\phi}$ therefore we have the following results:
+        \\
+        \\
+        $
+          \overrightarrow{H}=\begin{cases}
+            \dfrac{r}{2 \pi R^2} I ~ \hat{\phi} ~~~~~ r<R
+            \\
+            \\
+            \dfrac{1}{2 \pi r} I ~ \hat{\phi} ~~~~~ r\geq R
+          \end{cases}
+          \\
+          \\
+          \\
+          \\
+          \\
+          \therefore ~~~ \begin{cases}
+            \overrightarrow{B}=\dfrac{\mu_0 r (1+\chi_m)}{2 \pi R^2} I \hat{\phi} ~~~~ r<R
+            \\
+            \\
+            \overrightarrow{B}=\dfrac{\mu_0 (1+\chi_m)}{2 \pi r} I \hat{\phi} ~~~~~ r\geq R
+          \end{cases}
+        $
+        \\
+        \\
+        Time to calculate the bound currents. We know that $\overrightarrow{M}=\chi_m \overrightarrow{H}$. For the inner side we 
+        have:
+        \\
+        \\
+        $
+          \overrightarrow{M}=\dfrac{\chi_m r}{2 \pi R^2} I \hat{\phi}
+          \\
+          \\
+          \\
+          \overrightarrow{J_B}=\overrightarrow{\nabla} \times \overrightarrow{M}
+          =\hat{r} \left(\dfrac{1}{r} \dfrac{\partial ~ M_z}{\partial \phi}-\dfrac{\partial ~ M_{\phi}}{\partial z} \right)
+          +\hat{\phi} \left(\dfrac{\partial M_r}{\partial z}-\dfrac{\partial M_z}{\partial r}\right)
+          +\hat{z} \dfrac{1}{r} \left(\dfrac{\partial r M_{\phi}}{\partial r}-\dfrac{\partial M_r}{\partial \phi}\right)
+          \\
+          \\
+          \\
+          =\dfrac{1}{r} \dfrac{\partial }{\partial r} \left(\dfrac{\chi_m r^2 }{2 \pi R^2}\right) I \hat{z}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{J_B}=\dfrac{\chi_m }{\pi R^2} ~ I \hat{z} ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{K_B}=\dfrac{\chi_m}{2 \pi R} ~ I  \hat{\phi} \times \hat{r}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{K_B}=\dfrac{\chi_m}{2 \pi R} \left(-\hat{z}\right) ~~~~ \checkmark
+        $
+        \\
+        \\
+        \\
+        The net bound current flowing down the wire then is:
+        \\
+        \\
+        $
+          I_b=\bigints\limits_{0}^{R} \bigints\limits_{0}^{2 \pi} k_b ~ d\phi ~ dr
+          +\bigints\limits_{0}^{R} \bigints\limits_{0}^{2 \pi} J_b r ~ d\phi ~ dr
+          =\left(\dfrac{\chi_m ~ I}{2 \pi R}\right)\left(2 \pi R\right)\left(-\hat{z}\right)
+          +\left(\dfrac{\chi_m ~ I}{\pi R^2}\right)\left(\pi R^2\right)\left(\hat{z}\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ I_b=0 ~~~~ \checkmark
+        $
+        \\
+        \\
+      }
 
     \item A wire of circular cross-section with radius $R$ carries a uniformly distributed current, $I$. Suppose the current flows in the $+\hat{z}$ direction.
     Find the magnetic field $\overrightarrow{B}$ at all points inside the wire. Show that a vector potential of the form 
