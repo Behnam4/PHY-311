@@ -283,39 +283,188 @@
     but in opposite directions, say clockwise (seen from above) in the upper loop, and counter-clockwise in the lower loop. Find the z-value 
     on the axis where the magnetic field is maximal.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        We have two parallel circular loops and there is current $I$ in both of them but in different directions.
+        \\
+        \\
+        $
+          \overrightarrow{B}_2(\overrightarrow{r})=\dfrac{\mu_0}{4 \pi} ~ I ~ \bigints \dfrac{d\ell \times \hat{r}}{r^2}
+          \\
+          \\
+          \begin{cases}
+            r^2=\left(\epsilon+z\right)^2+a^2
+            \\
+            \\
+            \overrightarrow{B}(\overrightarrow{r})
+            \\
+            \\
+            k=\dfrac{\mu_0}{4 \pi} I
+          \end{cases}
+          \\
+          \\
+          \\
+          \overrightarrow{B}(\overrightarrow{r})=k \bigints \dfrac{a d\phi \hat{\phi} \times \left(-\dfrac{a \hat{r} +(\epsilon+z) \hat{z}}{r}\right)}{r^2}
+          \\
+          \\
+          \\
+          =k \bigints \dfrac{a d\phi \hat{\phi} \times \left(-a \hat{r}+(\epsilon+z) \hat{z}\right)}{r^3}
+          =\left[\dfrac{ka^2}{r^3} \bigints\limits_{0}^{2 \pi} d\phi(+\hat{z})\right]
+          +\left[\dfrac{ka (\epsilon+z)}{r^3} \bigints\limits_{0}^{2 \pi}\right]
+          \\
+          \\
+          \\
+          =\left[\dfrac{ka^2}{r^3} (2\pi) \hat{z}\right]
+          +\left[\dfrac{ka(\epsilon+z)}{r^3} \bigints\limits_{0}^{2 \pi} sin(\phi) d\phi \right]
+          =\dfrac{2 \pi ~ ka^2}{r^3} \hat{z}
+          \\
+          \\
+          \\
+          \therefore ~~~~ \overrightarrow{B}_2(\overrightarrow{r})=\dfrac{\mu_0 a^2}{2 \left[(\epsilon+z)^2+a^2\right]^{3/2}} ~ I ~ \hat{z} ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \\
+          \\
+          \begin{cases}
+            r^2=a^2+(-\epsilon+z)^2
+            \\
+            \\
+            \hat{r}=\dfrac{\overrightarrow{r}}{r}
+          \end{cases}
+          \\
+          \\
+          \\
+          \overrightarrow{B}_1(\overrightarrow{r})=k \bigints \dfrac{d\ell \times \hat{r}}{r^2}
+          =k \bigints\limits_{4 \pi}^{7} \dfrac{(-a d\phi \hat{\phi}) \times (-a \hat{r}+(-\epsilon+z) \hat{z})}{r^3}
+          \\
+          \\
+          \\
+          =\left[\dfrac{k}{r^3} \bigints (-a d\phi \hat{\phi}) \times (-a \hat{r})\right]
+          +\left[\dfrac{k}{r^3} \bigints (-a d\phi \hat{\phi}) \times ((-epsilon+z)\hat{z})\right]
+          =k\dfrac{2 \pi a^2}{r^3} (-\hat{z})
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{B}_1(\overrightarrow{r})=\dfrac{\mu_0 a^2}{2 \left[(-\epsilon+z)^2+a^2\right]^{3/2}} ~ I ~ \hat{-z}
+          \\
+        $
+        \\
+        \\
+        Since $\overrightarrow{B}=\overrightarrow{B}_1+\overrightarrow{B}_2$ we have:
+        \\
+        \\
+        $
+          \therefore ~~~ \overrightarrow{B}=\dfrac{\mu_0 a^2}{2} ~ \left[
+            \dfrac{1}{\left[(\epsilon+z)^2+a^2\right]^{3/2}}
+            -\dfrac{1}{\left[(-\epsilon+z)^2+a^2\right]^{3/2}}
+          \right] I ~ \hat{z} ~~~~ \checkmark
+        $
+        \\
+        \\
+        \\
+        $
+          \dfrac{dB}{dz}=\dfrac{d}{dz} \left[
+            \dfrac{\mu_0 I a^2}{2} \left[
+              \left((z+\epsilon)+a^2\right)^{3/2}
+              -\left((z-\epsilon)^2+a^2\right)
+            \right]
+          \right] \hat{z} ~~~~ \alpha=\mu_0 I a^2
+          \\
+          \\
+          \\
+          \alpha \left[
+            \left((z+\epsilon)+a^2\right)^{3/2}
+            -\left((z-\epsilon)^2+a^2\right)
+          \right]=0
+          \\
+          \\
+          \\
+          \therefore ~~~ \dfrac{d}{dz}=\left((z-\epsilon)^2+a^2\right)^{-3/2}
+          \\
+          \\
+          \\
+          -\dfrac{3}{2} \left((z+\epsilon)^2+a^2\right)^{-5/2} \dfrac{d}{dz} (z+\epsilon)^2
+          \\
+          \\
+          \\
+          \therefore \left(1+\dfrac{\epsilon^2-2z\epsilon}{z^2+a^2}\right)^{5/2} (z+\epsilon)
+          =\left(1+\dfrac{\epsilon^2+2z \epsilon}{z^2+a^2}\right)^{5/2} (z-\epsilon)
+        $
+        \\
+        \\
+        \\
+        Using the Taylor expansion we have:
+        \\
+        \\
+        $
+          \begin{cases}
+            \left(1+\dfrac{\epsilon^2+2z \epsilon}{z^2+a^2}\right)^{5/2} (z-\epsilon) \approx 1-\dfrac{4z \epsilon}{z^2+a^2}
+            \\
+            \\
+            \left(1+\dfrac{\epsilon^2-2z \epsilon}{z^2+a^2}\right)^{5/2} (z-\epsilon) \approx 1+\dfrac{4z \epsilon}{z^2+a^2}
+          \end{cases}
+          \\
+          \\
+          \\
+          \left(1-\dfrac{5 z\epsilon}{z^2+a^2}\right) (z+\epsilon)=\left(1+\dfrac{5 z \epsilon}{z^2+a^2}\right) (z-\epsilon)
+          \\
+          \\
+          \\
+          \therefore ~~~ 2\epsilon=\dfrac{10 z^2 \epsilon}{z^2+a^2}
+          \\
+          \\
+          \\
+          \therefore ~~~ z^2=\pm \dfrac{a^2}{4}
+          \\
+          \\
+          \\
+          \therefore ~~~ z=\pm \dfrac{a}{2} ~~~~ \checkmark
+          \\
+          \\
+        $
+        What we found is the position of the field at max. 
+      }
+
+    \pagebreak
 
     \item A hollow cone (like an ice cream cone) has vertex angle $2\theta$, slant height $L$ (slant height is measured along the side), 
     and surface charge density $\sigma$. The cone spins around its symmetry axis with angular frequency $\omega$. Find the magnetic field at 
     the tip of the cone.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        See the attached
+        \\
+      }
 
     \item Find the vector potential, $\overrightarrow{A}$, for
     \begin{enumerate}
       \item A finite straight wire with current $I$ (flowing in the $+\hat{z}$ direction)
       extending from $z=-z_0$ to $z=+z_0$.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        See the attached
+        \\
+      }
 
       \item An infinite straight wire, aligned in the $\hat{z}$ direction, with current
       $I$ flowing in the $+\hat{z}$ direction. (also find $\overrightarrow{B}$ from $\overrightarrow{A}$)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        See the attached
+        \\
+      }
       
       \item A uniform magnetic field $B_0$ in the $\hat{z}$ direction.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        See the attached
+        \\
+      }
 
     \end{enumerate}
 
