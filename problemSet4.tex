@@ -188,14 +188,52 @@
       %   \\
       % }
 
-    \item A wire of circular cross-section with radius $R$ carries a uniformlydistributed current, $I$. Suppose the current flows in the $+\hat{z}$ direction.
+    \item A wire of circular cross-section with radius $R$ carries a uniformly distributed current, $I$. Suppose the current flows in the $+\hat{z}$ direction.
     Find the magnetic field $\overrightarrow{B}$ at all points inside the wire. Show that a vector potential of the form 
     $\overrightarrow{A}=A_0 \left(x^2+y^2\right) ~ \hat{z}$ will correctly give the
     magnetic field. What is the value of the constant, $A_0$?
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        We have the current flows in the $\hat{z}$ direction. By using the right hand rule we can find the direction of the magentic field 
+        that can be assumed it is in the direction of $\hat{\phi}$. For this problem we have $I$ as: 
+        \\
+        \\
+        $
+          I_{enc}=\dfrac{I \pi r^2}{\pi R^2} \Longrightarrow I_{enc}=\dfrac{r^2}{R^2} ~ I
+          \\
+          \\
+          \\
+          \bigoint B.d\ell=\mu_0 ~ I_{enc} \Longrightarrow \bigoint B.d\ell=\mu_0 ~ \dfrac{r^2}{R^2} ~ I
+          \\
+          \\
+          \\
+          |B| 2 \pi r=\mu_0 ~ \dfrac{r^2}{R^2} ~ I \Longrightarrow |B|=\dfrac{\mu_0 r}{2 \pi R^2} ~ I ~ \hat{\phi} ~~~~ \checkmark
+          \\
+          \\
+          \\
+        $
+        In cylindrical coordinate we have $\overrightarrow{A}=A_0 r ~ \hat{z}$.
+        \\
+        \\
+        $
+          \overrightarrow{B}= \overrightarrow{\nabla} \times \overrightarrow{A}
+          =\hat{r} \left(\dfrac{1}{r} \dfrac{\partial ~ A_z}{\partial \phi}-\dfrac{\partial ~ A_{\phi}}{\partial z} \right)
+          +\hat{\phi} \left(\dfrac{\partial A_r}{\partial z}-\dfrac{\partial A_z}{\partial r}\right)
+          +\hat{z} \dfrac{1}{r} \left(\dfrac{\partial r A_{\phi}}{\partial r}-\dfrac{\partial A_r}{\partial \phi}\right)
+          =-2A_0 ~ r ~ \hat{\phi}
+          \\
+          \\
+          \\
+          \therefore ~~~ -2A_0 ~ r ~ \hat{\phi}=\dfrac{\mu_0 r}{2 \pi R^2} I \hat{\phi}
+          \\
+          \\
+          \\
+          \therefore ~~~ A_0=-\dfrac{\mu_0}{4 \pi r^2}I ~~~~ \checkmark
+        $
+        \\
+        \\
+      }
     
   \end{enumerate}
 
