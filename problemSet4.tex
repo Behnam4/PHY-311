@@ -121,9 +121,117 @@
     length and approximate $\overrightarrow{\nabla} B^2 \approx \dfrac{B^2}{L} \hat{z}$. (Geim later redeemed himself
     by winning the 2010 Nobel prize for his work on graphene.)
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        This probelm was solved by the help of a paper called \textbf{Of flying frogs and levitrons}.
+        We got the following.
+        \\
+        \\
+        $
+         \begin{cases}
+          \chi_m=0
+          \\
+          \\
+          \overrightarrow{\nabla} B^2 \approx \dfrac{B^2}{L} \hat{z}
+          \\
+          \\
+          \alpha=p \bigints\limits_{0}^{v} dv
+          \\
+          \\
+          \overrightarrow{M}=\overrightarrow{M} V^{-1} ~~~~ \text{Magnetic dipole of the frog}
+          \\
+          \\
+          \overrightarrow{H}=\dfrac{1}{\mu_0} \overrightarrow{B}-\overrightarrow{M} ~~~~~ \overrightarrow{M}=-|\chi_m| \overrightarrow{H}
+          \\
+          \\
+         \end{cases}
+         \\
+         \\
+         \\
+         \therefore ~~~ -\chi_m^{-1} \overrightarrow{M}=\dfrac{1}{\mu_0} \overrightarrow{B}-\overrightarrow{M}
+         \\
+         \\
+         \\
+         \therefore ~~~ \overrightarrow{M}-\dfrac{\chi_m}{\mu_0} \overrightarrow{B} ~~~~ \text{Since $1-\chi_m \approx 1$}
+         \\
+         \\
+         \\
+         \therefore ~~~ \overrightarrow{M}=-\dfrac{\chi_m V}{\mu_0} \overrightarrow{B}
+        $
+        \\
+        \\
+        Now we are all set to find the force on magnetic dipole.
+        \\
+        \\
+        $
+          \overrightarrow{F}=\left(\overrightarrow{M}.\overrightarrow{\nabla}\right) \overrightarrow{B}
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{F}=\mu \left(\dfrac{1}{2} \nabla |\overrightarrow{B}|^2-\overrightarrow{B} \times \left(\nabla \times \overrightarrow{B}\right)\right)
+          \\
+          \\
+          \\
+          \overrightarrow{B} \times \left(\nabla \times \overrightarrow{B}\right)=\overrightarrow{B} \times \overrightarrow{0}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{B} \times \left(\nabla \times \overrightarrow{B}\right)=\overrightarrow{0}
+          \\
+          \\
+        $
+        Therefore, the force on the magnetic dipole is:
+        \\
+        \\
+        $
+          \overrightarrow{F_m}=\dfrac{\mu}{2} \nabla B^2=\dfrac{\mu}{2L} B^2 \hat{z}
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{F_m}=-\dfrac{\chi_m V}{2 \mu_0 L} B^2 \hat{z} ~~~~ \checkmark
+        $
+        In order to have the frog to levitate, the gravity and the magnetic force has to be equal but in the opposite directions.
+        \\
+        \\
+        $
+          \overrightarrow{F_g}=\overrightarrow{F_m} \Longrightarrow pVg(-\hat{z})=\dfrac{\chi_m V}{2 \mu_0 L} B^2 (-\hat{z})
+          \\
+          \\
+          \\
+          \therefore ~~~ |B|=\sqrt{\left(\dfrac{2 \mu_0 Lpg}{\chi_m}\right)} ~~~~ \checkmark
+        $
+        \\
+        \\
+        For $\overrightarrow{F_m}$ we have:
+        \\
+        \\
+        $
+          \overrightarrow{F_m}=\overrightarrow{\nabla} \left(
+            \overrightarrow{m}.\overrightarrow{B}
+          \right)=\overrightarrow{\nabla} \left(
+            \dfrac{-\chi_m V}{\mu_0}\overrightarrow{B}.\overrightarrow{B}
+          \right)=-\dfrac{\chi_m V}{\mu_0} \nabla |B|^2=-\dfrac{k_m V B^2}{L} ~ \hat{z}
+          \\
+          \\
+          \\
+          \overrightarrow{F_g}=\overrightarrow{F_m} \Longrightarrow -\dfrac{\chi_m V B^2}{\mu_0 L} \hat{z}=pVg (-\hat{z})
+          \\
+          \\
+          \\
+          \therefore ~~~ |B|=\sqrt{\dfrac{L p g \mu_0}{\chi_m}}
+          \\
+          \\
+          \\
+          \therefore ~~~ |B|=\sqrt{\dfrac{p \times 0.1 \times 9.8 \times 4 \pi \times 10^{-7}}{10^{-5}}}
+          \\
+          \\
+          \\
+          \therefore ~~~ |B|=\dfrac{35}{100} \sqrt{p} ~~~~ T
+          \\
+          \\
+        $
+      }
+
+    \pagebreak
 
     \item \textbf{Hall Effect}
     \\
@@ -135,9 +243,40 @@
     corresponding electric field counteracts the magnetic deflection. Find the resulting Hall voltage, in terms of $B_0$, $v$, and the dimensions
     of the slab. Repeat your analysis for negative charge carriers.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        We should start by figuring out what direction the force due to $\overrightarrow{B}$ acts. 
+        \\
+        \\
+        $
+          \overrightarrow{F_m}=q  \left(v \times \overrightarrow{B}\right)=q v B \left(\hat{x} \times \hat{y}\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ \overrightarrow{F_m}=qvB ~ \hat{z} ~~~~ \checkmark
+        $
+        \\
+        \\
+        The Hall effect $\overrightarrow{F_m}-\overrightarrow{F_e}=0$, therfore, we have $qvB_0=qE \Longrightarrow E=vB_0$.
+        \\
+        \\
+        $
+          V_{H}=-\bigints\limits_{W}^{0} E ds=Ew=vwB_0
+          \\
+          \\
+          \\
+          \overrightarrow{F_m}=-q \left(v \times B\right)=-q (v)(-\hat{x}) \times B_0 \hat{y} \Longrightarrow \overrightarrow{F_m}=qvB \hat{z}
+        $
+        The reason for the above is that the current tavels in the $\hat{x}$ direction and the negative charges travel in the opposite direction.
+        \\
+        \\
+        $
+          |\overrightarrow{F_m}|=|\overrightarrow{F_e}| \Longrightarrow (-q) vB_0=(-q) E \longleftarrow E=vB_0 ~~~~ \checkmark
+          \\
+          \\
+          \therefore ~~~ V_H=-\bigints\limits_{W}^{0} E ds=vB_0 w ~~~~ \checkmark
+        $
+      }
 
     \item Two parallel circular loops of wire, each with radius a, have the same axis along the $\hat{z}$ direction. The planes of the loops 
     are located at $z=-\epsilon$ and $z=+\epsilon$, where $\epsilon << a$. Suppose that there is a current $I$ flowing in each of the loops, 
